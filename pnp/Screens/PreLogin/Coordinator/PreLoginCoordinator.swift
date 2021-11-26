@@ -43,7 +43,9 @@ extension PreLoginCoordinator: PreLoginCoordinatorDelegate {
 
     func goToSignIn() {
         // go to sign in
-        print("go to sign in")
+        let loginCoordinator = LoginCoordinator(navController: navigationController)
+        childCoordinators.append(loginCoordinator)
+        loginCoordinator.start()
     }
 
     func didFinishPreLogin() {

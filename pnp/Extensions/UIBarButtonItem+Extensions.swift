@@ -22,7 +22,7 @@ extension UIBarButtonItem {
     static func makeSignInButton(selector: Selector, target: Any?) -> UIBarButtonItem {
         UIBarButtonItem.withCustomButtonView(
             systemName: "rectangle.and.pencil.and.ellipsis",
-            title: "Giriş Yap",
+            title: GeneralConstants.login,
             selector: selector,
             target: target
         )

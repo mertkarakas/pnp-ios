@@ -84,6 +84,72 @@
             </objects>
             <point key="canvasLocation" x="139" y="70"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="1hw-N7-eRf">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cBx-mi-xzA" customClass="LoginViewController" customModule="pnp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P2h-36-FWf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanıcı adı:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPR-hO-AFv">
+                                <rect key="frame" x="16" y="94" width="94.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ez0-qM-KUD">
+                                <rect key="frame" x="16" y="123" width="213" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Şifre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoD-RE-LpH">
+                                <rect key="frame" x="16" y="175" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ycv-Zs-tIa">
+                                <rect key="frame" x="16" y="204" width="213" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SA-5G-nBd">
+                                <rect key="frame" x="165" y="283" width="84" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Giriş Yap"/>
+                                <connections>
+                                    <action selector="loginButtonAction:" destination="cBx-mi-xzA" eventType="touchUpInside" id="ELO-pi-nRt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="doO-cy-dDP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ycv-Zs-tIa" firstAttribute="width" secondItem="ez0-qM-KUD" secondAttribute="width" id="1wV-a4-jdE"/>
+                            <constraint firstItem="2SA-5G-nBd" firstAttribute="top" secondItem="ycv-Zs-tIa" secondAttribute="bottom" constant="45" id="4fl-iI-mWc"/>
+                            <constraint firstItem="ycv-Zs-tIa" firstAttribute="leading" secondItem="VoD-RE-LpH" secondAttribute="leading" id="HOc-ld-Sjf"/>
+                            <constraint firstItem="fPR-hO-AFv" firstAttribute="top" secondItem="doO-cy-dDP" secondAttribute="top" constant="50" id="IiN-4H-5rQ"/>
+                            <constraint firstItem="ez0-qM-KUD" firstAttribute="leading" secondItem="fPR-hO-AFv" secondAttribute="leading" id="Sj9-5Z-Fr0"/>
+                            <constraint firstItem="fPR-hO-AFv" firstAttribute="leading" secondItem="doO-cy-dDP" secondAttribute="leading" constant="16" id="h9I-dd-VRh"/>
+                            <constraint firstItem="ez0-qM-KUD" firstAttribute="width" secondItem="P2h-36-FWf" secondAttribute="width" multiplier="0.514493" id="hAZ-Xw-VkD"/>
+                            <constraint firstItem="ez0-qM-KUD" firstAttribute="top" secondItem="fPR-hO-AFv" secondAttribute="bottom" constant="8" symbolic="YES" id="lJh-1T-Uhj"/>
+                            <constraint firstItem="VoD-RE-LpH" firstAttribute="leading" secondItem="fPR-hO-AFv" secondAttribute="leading" id="nCd-Lo-5zT"/>
+                            <constraint firstItem="ycv-Zs-tIa" firstAttribute="top" secondItem="VoD-RE-LpH" secondAttribute="bottom" constant="8" symbolic="YES" id="qBI-Zk-dDY"/>
+                            <constraint firstItem="VoD-RE-LpH" firstAttribute="top" secondItem="ez0-qM-KUD" secondAttribute="bottom" constant="18" id="uNa-oC-vHw"/>
+                            <constraint firstItem="2SA-5G-nBd" firstAttribute="centerX" secondItem="P2h-36-FWf" secondAttribute="centerX" id="zLO-hW-Rsw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="2SA-5G-nBd" id="Kro-tM-VDo"/>
+                        <outlet property="passwordTextField" destination="ycv-Zs-tIa" id="pbD-ty-8XX"/>
+                        <outlet property="usernameTextField" destination="ez0-qM-KUD" id="qNr-5t-yW7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEB-CI-yOm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="746.65178571428567"/>
+        </scene>
         <!--Campaign View Controller-->
         <scene sceneID="EZ1-4n-rjf">
             <objects>

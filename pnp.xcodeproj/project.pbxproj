@@ -31,6 +31,12 @@
 		250D884F2751835D00C859BC /* CampaignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88472751835D00C859BC /* CampaignViewController.swift */; };
 		250D88542751840600C859BC /* Decimal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88532751840600C859BC /* Decimal+Extensions.swift */; };
 		250D88592751871800C859BC /* ListFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88582751871800C859BC /* ListFlowLayout.swift */; };
+		250D886127518F8E00C859BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D886027518F8E00C859BC /* LoginViewController.swift */; };
+		250D886527518FAA00C859BC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D886427518FAA00C859BC /* LoginViewModel.swift */; };
+		250D886827518FBD00C859BC /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D886727518FBD00C859BC /* LoginCoordinator.swift */; };
+		250D886C2751914E00C859BC /* GeneralConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D886B2751914E00C859BC /* GeneralConstants.swift */; };
+		250D8870275192C100C859BC /* TitleSubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D886F275192C100C859BC /* TitleSubtitleCell.swift */; };
+		250D8875275193A500C859BC /* TitleSubtitleCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D8874275193A500C859BC /* TitleSubtitleCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +66,12 @@
 		250D88472751835D00C859BC /* CampaignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignViewController.swift; sourceTree = "<group>"; };
 		250D88532751840600C859BC /* Decimal+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extensions.swift"; sourceTree = "<group>"; };
 		250D88582751871800C859BC /* ListFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFlowLayout.swift; sourceTree = "<group>"; };
+		250D886027518F8E00C859BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		250D886427518FAA00C859BC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		250D886727518FBD00C859BC /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		250D886B2751914E00C859BC /* GeneralConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralConstants.swift; sourceTree = "<group>"; };
+		250D886F275192C100C859BC /* TitleSubtitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCell.swift; sourceTree = "<group>"; };
+		250D8874275193A500C859BC /* TitleSubtitleCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,7 @@
 		250D87ED2751749F00C859BC /* pnp */ = {
 			isa = PBXGroup;
 			children = (
+				250D886A2751913700C859BC /* Constants */,
 				250D88052751754F00C859BC /* App */,
 				250D88092751766A00C859BC /* Extensions */,
 				250D88062751756D00C859BC /* Resources */,
@@ -170,6 +183,7 @@
 		250D882427517B0600C859BC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				250D886E2751929D00C859BC /* TableViewCell */,
 				250D883227517FDA00C859BC /* CollectionViewCell */,
 				250D8857275186D900C859BC /* FlowLayout */,
 			);
@@ -283,6 +297,7 @@
 		250D88512751836800C859BC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				250D885B27518F5C00C859BC /* Login */,
 				250D88362751835D00C859BC /* Campaign */,
 				250D8816275179C200C859BC /* PreLogin */,
 			);
@@ -295,6 +310,65 @@
 				250D88582751871800C859BC /* ListFlowLayout.swift */,
 			);
 			path = FlowLayout;
+			sourceTree = "<group>";
+		};
+		250D885B27518F5C00C859BC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				250D885C27518F6300C859BC /* Coordinator */,
+				250D885E27518F7000C859BC /* View */,
+				250D885F27518F7400C859BC /* ViewModel */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		250D885C27518F6300C859BC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				250D886727518FBD00C859BC /* LoginCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		250D885E27518F7000C859BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				250D886027518F8E00C859BC /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		250D885F27518F7400C859BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				250D886427518FAA00C859BC /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		250D886A2751913700C859BC /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				250D886B2751914E00C859BC /* GeneralConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		250D886E2751929D00C859BC /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				250D88732751939D00C859BC /* Model */,
+				250D886F275192C100C859BC /* TitleSubtitleCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		250D88732751939D00C859BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				250D8874275193A500C859BC /* TitleSubtitleCellModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,14 +443,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				250D8870275192C100C859BC /* TitleSubtitleCell.swift in Sources */,
 				250D88482751835D00C859BC /* CampaignViewModel.swift in Sources */,
+				250D886C2751914E00C859BC /* GeneralConstants.swift in Sources */,
 				250D882E27517BD400C859BC /* SliderItemCollectionViewCell.swift in Sources */,
 				250D882A27517B4700C859BC /* UINavigationItem+Extensions.swift in Sources */,
 				250D882727517B2300C859BC /* UIBarButtonItem+Extensions.swift in Sources */,
+				250D886827518FBD00C859BC /* LoginCoordinator.swift in Sources */,
 				250D884E2751835D00C859BC /* CampaignCollectionViewCell.swift in Sources */,
 				250D884C2751835D00C859BC /* CampaignModel.swift in Sources */,
 				250D88492751835D00C859BC /* CampaignCoordinator.swift in Sources */,
 				250D884F2751835D00C859BC /* CampaignViewController.swift in Sources */,
+				250D886127518F8E00C859BC /* LoginViewController.swift in Sources */,
 				250D88592751871800C859BC /* ListFlowLayout.swift in Sources */,
 				250D884B2751835D00C859BC /* CampaignDetailViewController.swift in Sources */,
 				250D88542751840600C859BC /* Decimal+Extensions.swift in Sources */,
@@ -386,8 +464,10 @@
 				250D880B2751767B00C859BC /* UIViewController+Extensions.swift in Sources */,
 				250D87EF2751749F00C859BC /* AppDelegate.swift in Sources */,
 				250D884A2751835D00C859BC /* CampaignDetailViewModel.swift in Sources */,
+				250D8875275193A500C859BC /* TitleSubtitleCellModel.swift in Sources */,
 				250D881F27517A3900C859BC /* PreLoginViewModel.swift in Sources */,
 				250D881C27517A2D00C859BC /* PreLoginViewController.swift in Sources */,
+				250D886527518FAA00C859BC /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
