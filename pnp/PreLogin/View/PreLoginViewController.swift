@@ -31,11 +31,11 @@ final class PreLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.sliderCollectionView.delegate = self
-        self.sliderCollectionView.dataSource = self
-        self.sliderCollectionView.register(UINib(nibName: Constants.sliderCollectionViewNibName, bundle: .main), forCellWithReuseIdentifier: Constants.sliderCollectionViewReuseIdentifier)
-        self.pageControl.numberOfPages = viewModel.banners.count
-        self.pageControl.currentPage = 0
+        sliderCollectionView.delegate = self
+        sliderCollectionView.dataSource = self
+        sliderCollectionView.register(UINib(nibName: Constants.sliderCollectionViewNibName, bundle: .main), forCellWithReuseIdentifier: Constants.sliderCollectionViewReuseIdentifier)
+        pageControl.numberOfPages = viewModel.banners.count
+        pageControl.currentPage = 0
 
         prepareUI()
     }
