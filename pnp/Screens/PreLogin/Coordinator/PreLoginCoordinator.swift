@@ -36,7 +36,9 @@ extension PreLoginCoordinator: PreLoginCoordinatorDelegate {
 
     func goToCampaigns() {
         // go to campaigns
-        print("go to campaigns")
+        let campaignCoordinator = CampaignCoordinator(navController: navigationController)
+        childCoordinators.append(campaignCoordinator)
+        campaignCoordinator.start()
     }
 
     func goToSignIn() {

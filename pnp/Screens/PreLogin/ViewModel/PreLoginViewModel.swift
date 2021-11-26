@@ -27,4 +27,3 @@ final class PreLoginViewModel: PreLoginViewModelProtocol {
         coordinatorDelegate?.goToSignIn()
     }
 }
-

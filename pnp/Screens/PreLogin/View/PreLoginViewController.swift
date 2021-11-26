@@ -59,9 +59,6 @@ final class PreLoginViewController: UIViewController {
         showCampaignsButton.layer.borderWidth = 2
         showCampaignsButton.contentEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
 
-        let rightBarButton = UIBarButtonItem(image: UIImage(systemName: Constants.rightBarButtonImage), style: .plain, target: self, action: #selector(rightBarButtonAction))
-        rightBarButton.title = Constants.loginTitle
-
         navigationItem.rightBarButtonItem = UIBarButtonItem.makeSignInButton(selector: #selector(rightBarButtonAction), target: self)
     }
 

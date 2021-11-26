@@ -21,6 +21,16 @@
 		250D882A27517B4700C859BC /* UINavigationItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D882927517B4700C859BC /* UINavigationItem+Extensions.swift */; };
 		250D882E27517BD400C859BC /* SliderItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D882C27517BD400C859BC /* SliderItemCollectionViewCell.swift */; };
 		250D882F27517BD400C859BC /* SliderItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250D882D27517BD400C859BC /* SliderItemCollectionViewCell.xib */; };
+		250D88482751835D00C859BC /* CampaignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88382751835D00C859BC /* CampaignViewModel.swift */; };
+		250D88492751835D00C859BC /* CampaignCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D883A2751835D00C859BC /* CampaignCoordinator.swift */; };
+		250D884A2751835D00C859BC /* CampaignDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D883E2751835D00C859BC /* CampaignDetailViewModel.swift */; };
+		250D884B2751835D00C859BC /* CampaignDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88402751835D00C859BC /* CampaignDetailViewController.swift */; };
+		250D884C2751835D00C859BC /* CampaignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88422751835D00C859BC /* CampaignModel.swift */; };
+		250D884D2751835D00C859BC /* CampaignCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250D88452751835D00C859BC /* CampaignCollectionViewCell.xib */; };
+		250D884E2751835D00C859BC /* CampaignCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88462751835D00C859BC /* CampaignCollectionViewCell.swift */; };
+		250D884F2751835D00C859BC /* CampaignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88472751835D00C859BC /* CampaignViewController.swift */; };
+		250D88542751840600C859BC /* Decimal+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88532751840600C859BC /* Decimal+Extensions.swift */; };
+		250D88592751871800C859BC /* ListFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88582751871800C859BC /* ListFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +50,16 @@
 		250D882927517B4700C859BC /* UINavigationItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extensions.swift"; sourceTree = "<group>"; };
 		250D882C27517BD400C859BC /* SliderItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		250D882D27517BD400C859BC /* SliderItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		250D88382751835D00C859BC /* CampaignViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignViewModel.swift; sourceTree = "<group>"; };
+		250D883A2751835D00C859BC /* CampaignCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignCoordinator.swift; sourceTree = "<group>"; };
+		250D883E2751835D00C859BC /* CampaignDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignDetailViewModel.swift; sourceTree = "<group>"; };
+		250D88402751835D00C859BC /* CampaignDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignDetailViewController.swift; sourceTree = "<group>"; };
+		250D88422751835D00C859BC /* CampaignModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignModel.swift; sourceTree = "<group>"; };
+		250D88452751835D00C859BC /* CampaignCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CampaignCollectionViewCell.xib; sourceTree = "<group>"; };
+		250D88462751835D00C859BC /* CampaignCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignCollectionViewCell.swift; sourceTree = "<group>"; };
+		250D88472751835D00C859BC /* CampaignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignViewController.swift; sourceTree = "<group>"; };
+		250D88532751840600C859BC /* Decimal+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extensions.swift"; sourceTree = "<group>"; };
+		250D88582751871800C859BC /* ListFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +94,8 @@
 			children = (
 				250D88052751754F00C859BC /* App */,
 				250D88092751766A00C859BC /* Extensions */,
-				250D8816275179C200C859BC /* PreLogin */,
 				250D88062751756D00C859BC /* Resources */,
+				250D88512751836800C859BC /* Screens */,
 				250D882427517B0600C859BC /* Shared */,
 				250D87F42751749F00C859BC /* Main.storyboard */,
 				250D87F9275174A100C859BC /* LaunchScreen.storyboard */,
@@ -108,6 +128,7 @@
 				250D880A2751767B00C859BC /* UIViewController+Extensions.swift */,
 				250D882627517B2300C859BC /* UIBarButtonItem+Extensions.swift */,
 				250D882927517B4700C859BC /* UINavigationItem+Extensions.swift */,
+				250D88532751840600C859BC /* Decimal+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -149,8 +170,8 @@
 		250D882427517B0600C859BC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				250D883327517FE800C859BC /* Model */,
 				250D883227517FDA00C859BC /* CollectionViewCell */,
+				250D8857275186D900C859BC /* FlowLayout */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -163,13 +184,6 @@
 			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
-		250D883327517FE800C859BC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		250D883427517FF300C859BC /* Slider */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +191,110 @@
 				250D882D27517BD400C859BC /* SliderItemCollectionViewCell.xib */,
 			);
 			path = Slider;
+			sourceTree = "<group>";
+		};
+		250D88362751835D00C859BC /* Campaign */ = {
+			isa = PBXGroup;
+			children = (
+				250D88392751835D00C859BC /* Coordinator */,
+				250D88412751835D00C859BC /* Model */,
+				250D883B2751835D00C859BC /* SubModules */,
+				250D88432751835D00C859BC /* View */,
+				250D88372751835D00C859BC /* ViewModel */,
+			);
+			path = Campaign;
+			sourceTree = "<group>";
+		};
+		250D88372751835D00C859BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				250D88382751835D00C859BC /* CampaignViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		250D88392751835D00C859BC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				250D883A2751835D00C859BC /* CampaignCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		250D883B2751835D00C859BC /* SubModules */ = {
+			isa = PBXGroup;
+			children = (
+				250D883C2751835D00C859BC /* CampaignDetail */,
+			);
+			path = SubModules;
+			sourceTree = "<group>";
+		};
+		250D883C2751835D00C859BC /* CampaignDetail */ = {
+			isa = PBXGroup;
+			children = (
+				250D883D2751835D00C859BC /* ViewModel */,
+				250D883F2751835D00C859BC /* View */,
+			);
+			path = CampaignDetail;
+			sourceTree = "<group>";
+		};
+		250D883D2751835D00C859BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				250D883E2751835D00C859BC /* CampaignDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		250D883F2751835D00C859BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				250D88402751835D00C859BC /* CampaignDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		250D88412751835D00C859BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				250D88422751835D00C859BC /* CampaignModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		250D88432751835D00C859BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				250D88442751835D00C859BC /* Cells */,
+				250D88472751835D00C859BC /* CampaignViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		250D88442751835D00C859BC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				250D88452751835D00C859BC /* CampaignCollectionViewCell.xib */,
+				250D88462751835D00C859BC /* CampaignCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		250D88512751836800C859BC /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				250D88362751835D00C859BC /* Campaign */,
+				250D8816275179C200C859BC /* PreLogin */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		250D8857275186D900C859BC /* FlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				250D88582751871800C859BC /* ListFlowLayout.swift */,
+			);
+			path = FlowLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +358,7 @@
 				250D87FB275174A100C859BC /* LaunchScreen.storyboard in Resources */,
 				250D87F8275174A100C859BC /* Assets.xcassets in Resources */,
 				250D87F62751749F00C859BC /* Main.storyboard in Resources */,
+				250D884D2751835D00C859BC /* CampaignCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,14 +369,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				250D88482751835D00C859BC /* CampaignViewModel.swift in Sources */,
 				250D882E27517BD400C859BC /* SliderItemCollectionViewCell.swift in Sources */,
 				250D882A27517B4700C859BC /* UINavigationItem+Extensions.swift in Sources */,
 				250D882727517B2300C859BC /* UIBarButtonItem+Extensions.swift in Sources */,
+				250D884E2751835D00C859BC /* CampaignCollectionViewCell.swift in Sources */,
+				250D884C2751835D00C859BC /* CampaignModel.swift in Sources */,
+				250D88492751835D00C859BC /* CampaignCoordinator.swift in Sources */,
+				250D884F2751835D00C859BC /* CampaignViewController.swift in Sources */,
+				250D88592751871800C859BC /* ListFlowLayout.swift in Sources */,
+				250D884B2751835D00C859BC /* CampaignDetailViewController.swift in Sources */,
+				250D88542751840600C859BC /* Decimal+Extensions.swift in Sources */,
 				250D88112751786400C859BC /* AppCoordinator.swift in Sources */,
 				250D882227517A4200C859BC /* PreLoginCoordinator.swift in Sources */,
 				250D88142751788A00C859BC /* DependencyContainer.swift in Sources */,
 				250D880B2751767B00C859BC /* UIViewController+Extensions.swift in Sources */,
 				250D87EF2751749F00C859BC /* AppDelegate.swift in Sources */,
+				250D884A2751835D00C859BC /* CampaignDetailViewModel.swift in Sources */,
 				250D881F27517A3900C859BC /* PreLoginViewModel.swift in Sources */,
 				250D881C27517A2D00C859BC /* PreLoginViewController.swift in Sources */,
 			);
