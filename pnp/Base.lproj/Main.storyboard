@@ -3,21 +3,81 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Pre Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="pnp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="PreLoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="PreLoginViewController" customModule="pnp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RbJ-QU-ITJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eao-Zz-AD7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="358.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="tSr-Zg-TzL">
+                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SliderCell" id="Yrc-9V-Xl2">
+                                        <rect key="frame" x="0.0" y="79.5" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yHe-2B-Lia">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fW4-0u-fam">
+                                <rect key="frame" x="145.5" y="352.5" width="123" height="28"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRE-lr-Ll4">
+                                <rect key="frame" x="122" y="432.5" width="170.5" height="22"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" title=" Kampanyaları Gör" image="newspaper" catalog="system">
+                                    <color key="titleColor" name="AccentColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="showCampaignsButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ttO-hC-Uim"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#İyilikİçinKodla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhY-8s-i8n">
+                                <rect key="frame" x="151" y="791" width="112.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1FH-0h-0rk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eao-Zz-AD7" firstAttribute="top" secondItem="1FH-0h-0rk" secondAttribute="top" id="2YO-ys-IxF"/>
+                            <constraint firstItem="bhY-8s-i8n" firstAttribute="centerX" secondItem="RbJ-QU-ITJ" secondAttribute="centerX" id="3hE-ny-4Es"/>
+                            <constraint firstItem="eao-Zz-AD7" firstAttribute="height" secondItem="RbJ-QU-ITJ" secondAttribute="height" multiplier="0.4" id="4X0-ut-ATJ"/>
+                            <constraint firstItem="pRE-lr-Ll4" firstAttribute="centerX" secondItem="RbJ-QU-ITJ" secondAttribute="centerX" id="NEp-04-bcv"/>
+                            <constraint firstItem="fW4-0u-fam" firstAttribute="centerX" secondItem="RbJ-QU-ITJ" secondAttribute="centerX" id="R2K-LI-LLb"/>
+                            <constraint firstItem="bhY-8s-i8n" firstAttribute="bottom" secondItem="1FH-0h-0rk" secondAttribute="bottom" constant="-50" id="cE0-Pw-HA5"/>
+                            <constraint firstItem="pRE-lr-Ll4" firstAttribute="top" secondItem="eao-Zz-AD7" secondAttribute="bottom" constant="30" id="f2W-6N-nV3"/>
+                            <constraint firstItem="fW4-0u-fam" firstAttribute="top" secondItem="eao-Zz-AD7" secondAttribute="bottom" constant="-50" id="jgc-bj-gmh"/>
+                            <constraint firstItem="eao-Zz-AD7" firstAttribute="leading" secondItem="1FH-0h-0rk" secondAttribute="leading" id="pKh-Fc-2jc"/>
+                            <constraint firstItem="1FH-0h-0rk" firstAttribute="trailing" secondItem="eao-Zz-AD7" secondAttribute="trailing" id="wOp-jF-aqa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pageControl" destination="fW4-0u-fam" id="pGy-Mp-EcZ"/>
+                        <outlet property="showCampaignsButton" destination="pRE-lr-Ll4" id="6Dh-Em-T5O"/>
+                        <outlet property="sliderCollectionView" destination="eao-Zz-AD7" id="O9Q-Mj-vH7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,6 +85,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="newspaper" catalog="system" width="128" height="108"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

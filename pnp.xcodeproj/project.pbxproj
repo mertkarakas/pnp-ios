@@ -8,19 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		250D87EF2751749F00C859BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D87EE2751749F00C859BC /* AppDelegate.swift */; };
-		250D87F32751749F00C859BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D87F22751749F00C859BC /* ViewController.swift */; };
 		250D87F62751749F00C859BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 250D87F42751749F00C859BC /* Main.storyboard */; };
 		250D87F8275174A100C859BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 250D87F7275174A100C859BC /* Assets.xcassets */; };
 		250D87FB275174A100C859BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 250D87F9275174A100C859BC /* LaunchScreen.storyboard */; };
 		250D880B2751767B00C859BC /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D880A2751767B00C859BC /* UIViewController+Extensions.swift */; };
 		250D88112751786400C859BC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88102751786400C859BC /* AppCoordinator.swift */; };
 		250D88142751788A00C859BC /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88132751788A00C859BC /* DependencyContainer.swift */; };
+		250D881C27517A2D00C859BC /* PreLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D881B27517A2D00C859BC /* PreLoginViewController.swift */; };
+		250D881F27517A3900C859BC /* PreLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D881E27517A3900C859BC /* PreLoginViewModel.swift */; };
+		250D882227517A4200C859BC /* PreLoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D882127517A4200C859BC /* PreLoginCoordinator.swift */; };
+		250D882727517B2300C859BC /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D882627517B2300C859BC /* UIBarButtonItem+Extensions.swift */; };
+		250D882A27517B4700C859BC /* UINavigationItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D882927517B4700C859BC /* UINavigationItem+Extensions.swift */; };
+		250D882E27517BD400C859BC /* SliderItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D882C27517BD400C859BC /* SliderItemCollectionViewCell.swift */; };
+		250D882F27517BD400C859BC /* SliderItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 250D882D27517BD400C859BC /* SliderItemCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		250D87EB2751749F00C859BC /* pnp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pnp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		250D87EE2751749F00C859BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		250D87F22751749F00C859BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		250D87F52751749F00C859BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		250D87F7275174A100C859BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		250D87FA275174A100C859BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +33,13 @@
 		250D880A2751767B00C859BC /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		250D88102751786400C859BC /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		250D88132751788A00C859BC /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		250D881B27517A2D00C859BC /* PreLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLoginViewController.swift; sourceTree = "<group>"; };
+		250D881E27517A3900C859BC /* PreLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLoginViewModel.swift; sourceTree = "<group>"; };
+		250D882127517A4200C859BC /* PreLoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreLoginCoordinator.swift; sourceTree = "<group>"; };
+		250D882627517B2300C859BC /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
+		250D882927517B4700C859BC /* UINavigationItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extensions.swift"; sourceTree = "<group>"; };
+		250D882C27517BD400C859BC /* SliderItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		250D882D27517BD400C859BC /* SliderItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderItemCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +74,9 @@
 			children = (
 				250D88052751754F00C859BC /* App */,
 				250D88092751766A00C859BC /* Extensions */,
+				250D8816275179C200C859BC /* PreLogin */,
 				250D88062751756D00C859BC /* Resources */,
-				250D87F22751749F00C859BC /* ViewController.swift */,
+				250D882427517B0600C859BC /* Shared */,
 				250D87F42751749F00C859BC /* Main.storyboard */,
 				250D87F9275174A100C859BC /* LaunchScreen.storyboard */,
 			);
@@ -93,8 +106,77 @@
 			isa = PBXGroup;
 			children = (
 				250D880A2751767B00C859BC /* UIViewController+Extensions.swift */,
+				250D882627517B2300C859BC /* UIBarButtonItem+Extensions.swift */,
+				250D882927517B4700C859BC /* UINavigationItem+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		250D8816275179C200C859BC /* PreLogin */ = {
+			isa = PBXGroup;
+			children = (
+				250D881927517A0500C859BC /* Coordinator */,
+				250D8817275179FC00C859BC /* View */,
+				250D881827517A0000C859BC /* ViewModel */,
+			);
+			path = PreLogin;
+			sourceTree = "<group>";
+		};
+		250D8817275179FC00C859BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				250D881B27517A2D00C859BC /* PreLoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		250D881827517A0000C859BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				250D881E27517A3900C859BC /* PreLoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		250D881927517A0500C859BC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				250D882127517A4200C859BC /* PreLoginCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		250D882427517B0600C859BC /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				250D883327517FE800C859BC /* Model */,
+				250D883227517FDA00C859BC /* CollectionViewCell */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		250D883227517FDA00C859BC /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				250D883427517FF300C859BC /* Slider */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		250D883327517FE800C859BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		250D883427517FF300C859BC /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				250D882C27517BD400C859BC /* SliderItemCollectionViewCell.swift */,
+				250D882D27517BD400C859BC /* SliderItemCollectionViewCell.xib */,
+			);
+			path = Slider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				250D882F27517BD400C859BC /* SliderItemCollectionViewCell.xib in Resources */,
 				250D87FB275174A100C859BC /* LaunchScreen.storyboard in Resources */,
 				250D87F8275174A100C859BC /* Assets.xcassets in Resources */,
 				250D87F62751749F00C859BC /* Main.storyboard in Resources */,
@@ -167,11 +250,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				250D882E27517BD400C859BC /* SliderItemCollectionViewCell.swift in Sources */,
+				250D882A27517B4700C859BC /* UINavigationItem+Extensions.swift in Sources */,
+				250D882727517B2300C859BC /* UIBarButtonItem+Extensions.swift in Sources */,
 				250D88112751786400C859BC /* AppCoordinator.swift in Sources */,
+				250D882227517A4200C859BC /* PreLoginCoordinator.swift in Sources */,
 				250D88142751788A00C859BC /* DependencyContainer.swift in Sources */,
-				250D87F32751749F00C859BC /* ViewController.swift in Sources */,
 				250D880B2751767B00C859BC /* UIViewController+Extensions.swift in Sources */,
 				250D87EF2751749F00C859BC /* AppDelegate.swift in Sources */,
+				250D881F27517A3900C859BC /* PreLoginViewModel.swift in Sources */,
+				250D881C27517A2D00C859BC /* PreLoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

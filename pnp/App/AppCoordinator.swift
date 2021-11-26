@@ -24,8 +24,10 @@ final class AppCoordinator: CoordinatorProtocol {
     func start() {
         let navigationController = UINavigationController()
 
-        let controller: ViewController = .instantiate()
-        navigationController.setViewControllers([controller], animated: false)
+        let preloginCoordinator = PreLoginCoordinator(navController: navigationController)
+        preloginCoordinator.parentCoordinator = self
+        childCoordinators.append(preloginCoordinator)
+        preloginCoordinator.start()
 
         let window = dependencyContainer.window
         window.rootViewController = navigationController
