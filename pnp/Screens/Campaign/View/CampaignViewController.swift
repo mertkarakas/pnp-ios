@@ -44,7 +44,7 @@ final class CampaignViewController: UIViewController {
     // MARK: - Actions
 
     @objc private func rightBarButtonAction() {
-        
+        viewModel.goToSignIn()
     }
 }
 

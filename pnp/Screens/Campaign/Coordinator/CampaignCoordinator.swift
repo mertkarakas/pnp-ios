@@ -9,6 +9,7 @@ import UIKit
 
 protocol CampaignCoordinatorDelegate: AnyObject {
     func goToDetail(with item: CampaignModel)
+    func goToSignIn()
 }
 
 final class CampaignCoordinator: CoordinatorProtocol {
@@ -36,5 +37,11 @@ extension CampaignCoordinator: CampaignCoordinatorDelegate {
         campaignDetailViewController.viewModel = campaignDetailViewModel
 
         navigationController.present(campaignDetailViewController, animated: true, completion: nil)
+    }
+
+    func goToSignIn() {
+        let loginCoordinator = LoginCoordinator(navController: navigationController)
+        childCoordinators.append(loginCoordinator)
+        loginCoordinator.start()
     }
 }

@@ -9,6 +9,7 @@ protocol CampaignViewModelProtocol {
     var models: [CampaignModel] { get }
 
     func didSelectItem(at index: Int)
+    func goToSignIn()
 }
 
 final class CampaignViewModel: CampaignViewModelProtocol {
@@ -33,5 +34,9 @@ final class CampaignViewModel: CampaignViewModelProtocol {
 
     func didSelectItem(at index: Int) {
         coordinatorDelegate?.goToDetail(with: models[index])
+    }
+
+    func goToSignIn() {
+        coordinatorDelegate?.goToSignIn()
     }
 }
