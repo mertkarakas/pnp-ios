@@ -25,7 +25,6 @@ final class LoginViewController: UIViewController {
         passwordTextField.autocorrectionType = .no
 
         title = GeneralConstants.login
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     @IBAction func loginButtonAction(_ sender: Any) {
