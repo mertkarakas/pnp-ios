@@ -9,17 +9,24 @@ import UIKit
 
 class SplashViewController: UIViewController {
 
-    @IBOutlet weak var splashImageView: UIImageView!
-    var viewModel: SplashViewModel!
+    @IBOutlet private weak var splashImageView: UIImageView!
+    var viewModel: SplashViewModelProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        clearNavigationBar()
+        makeAnimation()
+    }
+
+    private func clearNavigationBar() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.tintColor = .primary
+    }
 
+    private func makeAnimation() {
         UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
 
             self.splashImageView.transform = CGAffineTransform.identity.scaledBy(x: 4, y: 4)

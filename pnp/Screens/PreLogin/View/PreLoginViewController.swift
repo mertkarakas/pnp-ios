@@ -63,7 +63,7 @@ final class PreLoginViewController: UIViewController {
         viewModel.goToSignIn()
     }
 
-    @IBAction func showCampaignsButtonAction(_ sender: Any) {
+    @IBAction private func showCampaignsButtonAction(_ sender: Any) {
         viewModel.showCampaignAction()
     }
 }

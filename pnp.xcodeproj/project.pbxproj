@@ -51,7 +51,27 @@
 		250D88BC2751D33100C859BC /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88BB2751D33100C859BC /* SplashCoordinator.swift */; };
 		250D88C42751D9AF00C859BC /* Service.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250D88C32751D9AF00C859BC /* Service.framework */; };
 		250D88C52751D9AF00C859BC /* Service.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 250D88C32751D9AF00C859BC /* Service.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		250D88D52751DE2100C859BC /* pnpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88D42751DE2100C859BC /* pnpTests.swift */; };
+		250D88E12751DE6200C859BC /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88DE2751DE6200C859BC /* AppDelegateTests.swift */; };
+		250D88E22751DE6200C859BC /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88DF2751DE6200C859BC /* AppCoordinatorTests.swift */; };
+		250D88E32751DE6200C859BC /* DependencyContainerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88E02751DE6200C859BC /* DependencyContainerTest.swift */; };
+		250D88ED2751DEE900C859BC /* PreLoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88E82751DEE900C859BC /* PreLoginViewModelTests.swift */; };
+		250D88EE2751DEE900C859BC /* PreLoginCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88EA2751DEE900C859BC /* PreLoginCoordinatorTests.swift */; };
+		250D88EF2751DEE900C859BC /* PreLoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88EC2751DEE900C859BC /* PreLoginViewControllerTests.swift */; };
+		250D88F82751E08A00C859BC /* SplashCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88F72751E08A00C859BC /* SplashCoordinatorTests.swift */; };
+		250D88FC2751E0AB00C859BC /* SplashViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88FB2751E0AB00C859BC /* SplashViewModelTests.swift */; };
+		250D89002751E16F00C859BC /* SplashViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88FF2751E16F00C859BC /* SplashViewControllerTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		250D88D72751DE2100C859BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 250D87E32751749F00C859BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 250D87EA2751749F00C859BC;
+			remoteInfo = pnp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		250D88C62751D9B000C859BC /* Embed Frameworks */ = {
@@ -113,6 +133,18 @@
 		250D88B82751D31100C859BC /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		250D88BB2751D33100C859BC /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		250D88C32751D9AF00C859BC /* Service.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Service.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		250D88D22751DE2100C859BC /* pnpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pnpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		250D88D42751DE2100C859BC /* pnpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pnpTests.swift; sourceTree = "<group>"; };
+		250D88D62751DE2100C859BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		250D88DE2751DE6200C859BC /* AppDelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		250D88DF2751DE6200C859BC /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		250D88E02751DE6200C859BC /* DependencyContainerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyContainerTest.swift; sourceTree = "<group>"; };
+		250D88E82751DEE900C859BC /* PreLoginViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreLoginViewModelTests.swift; sourceTree = "<group>"; };
+		250D88EA2751DEE900C859BC /* PreLoginCoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreLoginCoordinatorTests.swift; sourceTree = "<group>"; };
+		250D88EC2751DEE900C859BC /* PreLoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreLoginViewControllerTests.swift; sourceTree = "<group>"; };
+		250D88F72751E08A00C859BC /* SplashCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinatorTests.swift; sourceTree = "<group>"; };
+		250D88FB2751E0AB00C859BC /* SplashViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModelTests.swift; sourceTree = "<group>"; };
+		250D88FF2751E16F00C859BC /* SplashViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +156,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		250D88CF2751DE2100C859BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -131,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				250D87ED2751749F00C859BC /* pnp */,
+				250D88D32751DE2100C859BC /* pnpTests */,
 				250D87EC2751749F00C859BC /* Products */,
 				250D88C22751D9AF00C859BC /* Frameworks */,
 			);
@@ -140,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				250D87EB2751749F00C859BC /* pnp.app */,
+				250D88D22751DE2100C859BC /* pnpTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -546,6 +587,96 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		250D88D32751DE2100C859BC /* pnpTests */ = {
+			isa = PBXGroup;
+			children = (
+				250D88DD2751DE6200C859BC /* App */,
+				250D88E62751DEE900C859BC /* PreLogin */,
+				250D88F32751E05400C859BC /* Splash */,
+				250D88D42751DE2100C859BC /* pnpTests.swift */,
+				250D88D62751DE2100C859BC /* Info.plist */,
+			);
+			path = pnpTests;
+			sourceTree = "<group>";
+		};
+		250D88DD2751DE6200C859BC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				250D88DE2751DE6200C859BC /* AppDelegateTests.swift */,
+				250D88DF2751DE6200C859BC /* AppCoordinatorTests.swift */,
+				250D88E02751DE6200C859BC /* DependencyContainerTest.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		250D88E62751DEE900C859BC /* PreLogin */ = {
+			isa = PBXGroup;
+			children = (
+				250D88E72751DEE900C859BC /* ViewModel */,
+				250D88E92751DEE900C859BC /* Coordinator */,
+				250D88EB2751DEE900C859BC /* View */,
+			);
+			path = PreLogin;
+			sourceTree = "<group>";
+		};
+		250D88E72751DEE900C859BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				250D88E82751DEE900C859BC /* PreLoginViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		250D88E92751DEE900C859BC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				250D88EA2751DEE900C859BC /* PreLoginCoordinatorTests.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		250D88EB2751DEE900C859BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				250D88EC2751DEE900C859BC /* PreLoginViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		250D88F32751E05400C859BC /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				250D88F62751E06A00C859BC /* ViewModel */,
+				250D88F52751E06500C859BC /* View */,
+				250D88F42751E05E00C859BC /* Coordinator */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		250D88F42751E05E00C859BC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				250D88F72751E08A00C859BC /* SplashCoordinatorTests.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		250D88F52751E06500C859BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				250D88FF2751E16F00C859BC /* SplashViewControllerTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		250D88F62751E06A00C859BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				250D88FB2751E0AB00C859BC /* SplashViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -567,6 +698,24 @@
 			productReference = 250D87EB2751749F00C859BC /* pnp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		250D88D12751DE2100C859BC /* pnpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 250D88D92751DE2100C859BC /* Build configuration list for PBXNativeTarget "pnpTests" */;
+			buildPhases = (
+				250D88CE2751DE2100C859BC /* Sources */,
+				250D88CF2751DE2100C859BC /* Frameworks */,
+				250D88D02751DE2100C859BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				250D88D82751DE2100C859BC /* PBXTargetDependency */,
+			);
+			name = pnpTests;
+			productName = pnpTests;
+			productReference = 250D88D22751DE2100C859BC /* pnpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -578,6 +727,10 @@
 				TargetAttributes = {
 					250D87EA2751749F00C859BC = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					250D88D12751DE2100C859BC = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 250D87EA2751749F00C859BC;
 					};
 				};
 			};
@@ -595,6 +748,7 @@
 			projectRoot = "";
 			targets = (
 				250D87EA2751749F00C859BC /* pnp */,
+				250D88D12751DE2100C859BC /* pnpTests */,
 			);
 		};
 /* End PBXProject section */
@@ -609,6 +763,13 @@
 				250D87F8275174A100C859BC /* Assets.xcassets in Resources */,
 				250D87F62751749F00C859BC /* Main.storyboard in Resources */,
 				250D884D2751835D00C859BC /* CampaignCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		250D88D02751DE2100C859BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,7 +820,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		250D88CE2751DE2100C859BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				250D88EE2751DEE900C859BC /* PreLoginCoordinatorTests.swift in Sources */,
+				250D88F82751E08A00C859BC /* SplashCoordinatorTests.swift in Sources */,
+				250D88E12751DE6200C859BC /* AppDelegateTests.swift in Sources */,
+				250D88FC2751E0AB00C859BC /* SplashViewModelTests.swift in Sources */,
+				250D88D52751DE2100C859BC /* pnpTests.swift in Sources */,
+				250D88EF2751DEE900C859BC /* PreLoginViewControllerTests.swift in Sources */,
+				250D88E32751DE6200C859BC /* DependencyContainerTest.swift in Sources */,
+				250D89002751E16F00C859BC /* SplashViewControllerTests.swift in Sources */,
+				250D88E22751DE6200C859BC /* AppCoordinatorTests.swift in Sources */,
+				250D88ED2751DEE900C859BC /* PreLoginViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		250D88D82751DE2100C859BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 250D87EA2751749F00C859BC /* pnp */;
+			targetProxy = 250D88D72751DE2100C859BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		250D87F42751749F00C859BC /* Main.storyboard */ = {
@@ -833,6 +1019,44 @@
 			};
 			name = Release;
 		};
+		250D88DA2751DE2100C859BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = pnpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mertkgs.pnpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pnp.app/pnp";
+			};
+			name = Debug;
+		};
+		250D88DB2751DE2100C859BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = pnpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mertkgs.pnpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pnp.app/pnp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -850,6 +1074,15 @@
 			buildConfigurations = (
 				250D8800275174A100C859BC /* Debug */,
 				250D8801275174A100C859BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		250D88D92751DE2100C859BC /* Build configuration list for PBXNativeTarget "pnpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				250D88DA2751DE2100C859BC /* Debug */,
+				250D88DB2751DE2100C859BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
