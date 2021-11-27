@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balloon" translatesAutoresizingMaskIntoConstraints="NO" id="bH4-dU-Peo">
-                                <rect key="frame" x="0.0" y="179" width="414" height="717"/>
+                                <rect key="frame" x="0.0" y="169" width="414" height="717"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ng0-te-mh8"/>
@@ -28,7 +28,7 @@
                             <constraint firstItem="Ng0-te-mh8" firstAttribute="trailing" secondItem="bH4-dU-Peo" secondAttribute="trailing" id="MP2-Uu-UzP"/>
                             <constraint firstItem="bH4-dU-Peo" firstAttribute="leading" secondItem="Ng0-te-mh8" secondAttribute="leading" id="eXf-9g-Ngp"/>
                             <constraint firstItem="bH4-dU-Peo" firstAttribute="height" secondItem="puF-d5-YLX" secondAttribute="height" multiplier="0.8" id="i53-QS-q5x"/>
-                            <constraint firstAttribute="bottom" secondItem="bH4-dU-Peo" secondAttribute="bottom" id="ueZ-ps-ycS"/>
+                            <constraint firstAttribute="bottom" secondItem="bH4-dU-Peo" secondAttribute="bottom" constant="10" id="ueZ-ps-ycS"/>
                         </constraints>
                     </view>
                     <connections>

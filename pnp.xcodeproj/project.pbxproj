@@ -61,6 +61,8 @@
 		250D88F82751E08A00C859BC /* SplashCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88F72751E08A00C859BC /* SplashCoordinatorTests.swift */; };
 		250D88FC2751E0AB00C859BC /* SplashViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88FB2751E0AB00C859BC /* SplashViewModelTests.swift */; };
 		250D89002751E16F00C859BC /* SplashViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88FF2751E16F00C859BC /* SplashViewControllerTests.swift */; };
+		250D89082751EA7600C859BC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D89072751EA7600C859BC /* CoreDataManager.swift */; };
+		250D89172751ED7800C859BC /* PnpApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 250D89152751ED7800C859BC /* PnpApp.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +147,8 @@
 		250D88F72751E08A00C859BC /* SplashCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinatorTests.swift; sourceTree = "<group>"; };
 		250D88FB2751E0AB00C859BC /* SplashViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModelTests.swift; sourceTree = "<group>"; };
 		250D88FF2751E16F00C859BC /* SplashViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerTests.swift; sourceTree = "<group>"; };
+		250D89072751EA7600C859BC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		250D89162751ED7800C859BC /* PnpApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PnpApp.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,7 @@
 				250D87EE2751749F00C859BC /* AppDelegate.swift */,
 				250D88102751786400C859BC /* AppCoordinator.swift */,
 				250D88132751788A00C859BC /* DependencyContainer.swift */,
+				250D89072751EA7600C859BC /* CoreDataManager.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 		250D88062751756D00C859BC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				250D89152751ED7800C859BC /* PnpApp.xcdatamodeld */,
 				250D87FC275174A100C859BC /* Info.plist */,
 				250D87F7275174A100C859BC /* Assets.xcassets */,
 			);
@@ -790,6 +796,7 @@
 				250D882E27517BD400C859BC /* SliderItemCollectionViewCell.swift in Sources */,
 				250D882A27517B4700C859BC /* UINavigationItem+Extensions.swift in Sources */,
 				250D882727517B2300C859BC /* UIBarButtonItem+Extensions.swift in Sources */,
+				250D89172751ED7800C859BC /* PnpApp.xcdatamodeld in Sources */,
 				250D886827518FBD00C859BC /* LoginCoordinator.swift in Sources */,
 				250D884E2751835D00C859BC /* CampaignCollectionViewCell.swift in Sources */,
 				250D884C2751835D00C859BC /* CampaignModel.swift in Sources */,
@@ -802,6 +809,7 @@
 				250D884B2751835D00C859BC /* CampaignDetailViewController.swift in Sources */,
 				250D88B12751D11B00C859BC /* SplashViewController.swift in Sources */,
 				250D88542751840600C859BC /* Decimal+Extensions.swift in Sources */,
+				250D89082751EA7600C859BC /* CoreDataManager.swift in Sources */,
 				250D88112751786400C859BC /* AppCoordinator.swift in Sources */,
 				250D88A42751BEED00C859BC /* NewCampaignCoordinator.swift in Sources */,
 				250D882227517A4200C859BC /* PreLoginCoordinator.swift in Sources */,
@@ -1088,6 +1096,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		250D89152751ED7800C859BC /* PnpApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				250D89162751ED7800C859BC /* PnpApp.xcdatamodel */,
+			);
+			currentVersion = 250D89162751ED7800C859BC /* PnpApp.xcdatamodel */;
+			path = PnpApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 250D87E32751749F00C859BC /* Project object */;
 }
