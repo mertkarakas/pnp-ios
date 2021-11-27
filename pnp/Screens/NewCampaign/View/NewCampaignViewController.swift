@@ -31,7 +31,7 @@ final class NewCampaignViewController: UIViewController, UIImagePickerController
             title: campaignNameTextField.text,
             subtitle: campaignDescriptionTextfield.text,
             targetAmount: targetAmounTextField.text,
-            image: imageView.image?.jpegData(compressionQuality: 1)
+            image: imageView.image?.jpegData(compressionQuality: 0.4)
         )
     }
     @IBAction func uploadImage(_ sender: Any) {

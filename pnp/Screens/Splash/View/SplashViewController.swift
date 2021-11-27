@@ -23,7 +23,7 @@ class SplashViewController: UIViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.tintColor = .primary
     }
 
     private func makeAnimation() {
