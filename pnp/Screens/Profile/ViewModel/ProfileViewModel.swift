@@ -7,7 +7,9 @@
 
 protocol ProfileViewModelProtocol {
     var user: User? { get }
+
     func logout()
+    func getIzToken()
 }
 
 final class ProfileViewModel: ProfileViewModelProtocol {
@@ -21,5 +23,9 @@ final class ProfileViewModel: ProfileViewModelProtocol {
     
     func logout() {
         coordinatorDelegate?.logout()
+    }
+
+    func getIzToken() {
+        coordinatorDelegate?.getIzToken()
     }
 }

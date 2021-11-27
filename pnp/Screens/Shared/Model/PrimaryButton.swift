@@ -22,14 +22,15 @@ final class PrimaryButton: UIButton {
     }
 
     private func configure() {
-        layer.cornerRadius = 4
-        backgroundColor = .primary
-        tintColor = .white
-        setTitleColor(.white, for: .normal)
+        layer.cornerRadius = 8
+        backgroundColor = .white
+        tintColor = .primary
+        setTitleColor(.primary, for: .normal)
+        setTitleColor(.white, for: .disabled)
         contentEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
     }
 
     private func isActive(_ isActive: Bool) {
-        backgroundColor = isActive ? .primary : .gray
+        backgroundColor = isActive ? .white : .gray
     }
 }

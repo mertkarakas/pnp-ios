@@ -74,6 +74,13 @@ extension DashboardCoordinator: CampaignCoordinatorDelegate {
 }
 
 extension DashboardCoordinator: ProfileCoordinatorDelegate {
+
+    func getIzToken() {
+        let getIztoken = GetIzTokenCoordinator(navController: navigationController, dependency: dependency, user: user)
+        childCoordinators.append(getIztoken)
+        getIztoken.start()
+    }
+    
     func logout() {
         let preloginCoordinator = PreLoginCoordinator(navController: navigationController, dependency: dependency)
         childCoordinators.append(preloginCoordinator)

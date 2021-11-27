@@ -24,4 +24,13 @@ extension UIViewController {
         })
         present(alertController, animated: true, completion: nil)
     }
+
+
+    func applyBackgroundImage() {
+        let backgroundImage = UIImage(named: "preloginBackground")
+        let imageView = UIImageView(image: backgroundImage)
+        imageView.frame = view.frame
+        view.addSubview(imageView)
+        view.sendSubviewToBack(imageView)
+    }
 }

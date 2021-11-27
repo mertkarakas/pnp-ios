@@ -15,20 +15,24 @@ final class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         prepareUI()
     }
 
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         izTokenCountLabel.text = "\(viewModel.user?.izToken ?? 0)"
     }
 
     private func prepareUI() {
         view.backgroundColor = .background
-        usernameLabel.text = viewModel.user?.username
     }
 
     @IBAction func logoutButtonAction(_ sender: Any) {
         viewModel.logout()
+    }
+
+    @IBAction func getIzTokenAction(_ sender: Any) {
+        viewModel.getIzToken()
     }
 }

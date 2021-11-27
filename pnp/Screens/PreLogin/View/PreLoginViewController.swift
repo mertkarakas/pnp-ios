@@ -31,6 +31,7 @@ final class PreLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
         sliderCollectionView.delegate = self
         sliderCollectionView.dataSource = self
         sliderCollectionView.register(UINib(nibName: Constants.sliderCollectionViewNibName, bundle: .main), forCellWithReuseIdentifier: Constants.sliderCollectionViewReuseIdentifier)
@@ -54,7 +55,8 @@ final class PreLoginViewController: UIViewController {
 
     private func prepareUI() {
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem.makeSignInButton(selector: #selector(rightBarButtonAction), target: self)
+        //applyBackgroundImage()
+        view.backgroundColor = .systemBlue
     }
 
     // MARK: - Actions
@@ -65,6 +67,14 @@ final class PreLoginViewController: UIViewController {
 
     @IBAction private func showCampaignsButtonAction(_ sender: Any) {
         viewModel.showCampaignAction()
+    }
+
+    @IBAction func loginButtonAction(_ sender: Any) {
+        viewModel.goToSignIn()
+    }
+
+    @IBAction func newAccountButtonAction(_ sender: Any) {
+        viewModel.goToSignIn()
     }
 }
 

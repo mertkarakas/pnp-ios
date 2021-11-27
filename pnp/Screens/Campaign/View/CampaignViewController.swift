@@ -38,8 +38,6 @@ final class CampaignViewController: UIViewController {
         campaignCollectionView.delegate = self
         campaignCollectionView.dataSource = self
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem.makeSignInButton(selector: #selector(rightBarButtonAction), target: self)
-
     }
 
     // MARK: - Actions

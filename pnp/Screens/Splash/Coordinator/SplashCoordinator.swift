@@ -40,4 +40,3 @@ extension SplashCoordinator: SplashCoordinatorDelegate {
         preloginCoordinator.start()
     }
 }
-

@@ -9,6 +9,7 @@ import UIKit
 
 protocol ProfileCoordinatorDelegate: AnyObject {
     func logout()
+    func getIzToken()
 }
 
 final class ProfileCoordinator: CoordinatorProtocol {
@@ -38,6 +39,12 @@ extension ProfileCoordinator: ProfileCoordinatorDelegate {
         let preloginCoordinator = PreLoginCoordinator(navController: navigationController, dependency: dependency)
         childCoordinators.append(preloginCoordinator)
         preloginCoordinator.start()
+    }
+
+    func getIzToken() {
+        let getIztoken = GetIzTokenCoordinator(navController: navigationController, dependency: dependency, user: nil)
+        childCoordinators.append(getIztoken)
+        getIztoken.start()
     }
 }
 
