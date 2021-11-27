@@ -388,7 +388,6 @@
 		250D88512751836800C859BC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				250D88AE2751D0FB00C859BC /* Splash */,
 				250D88362751835D00C859BC /* Campaign */,
 				250D887B27519E9C00C859BC /* Dashboard */,
 				250D885B27518F5C00C859BC /* Login */,
@@ -396,6 +395,7 @@
 				250D88892751A12D00C859BC /* Profile */,
 				250D8816275179C200C859BC /* PreLogin */,
 				250D882427517B0600C859BC /* Shared */,
+				250D88AE2751D0FB00C859BC /* Splash */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
