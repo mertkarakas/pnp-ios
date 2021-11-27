@@ -493,20 +493,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mobile-hackathon" translatesAutoresizingMaskIntoConstraints="NO" id="5Dy-lc-Wrx">
-                                <rect key="frame" x="20" y="64" width="64" height="64"/>
+                                <rect key="frame" x="20" y="54" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="jgA-TK-vuU"/>
                                     <constraint firstAttribute="height" constant="64" id="lBl-6M-gwh"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQa-UL-pwK">
-                                <rect key="frame" x="92" y="86" width="302" height="20.5"/>
+                                <rect key="frame" x="92" y="76" width="302" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jXK-rp-ykp">
-                                <rect key="frame" x="16" y="148" width="382" height="142"/>
+                                <rect key="frame" x="16" y="138" width="382" height="142"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="GVM-yo-118">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="92"/>
@@ -596,18 +596,29 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifd-gh-HPH">
+                                <rect key="frame" x="355" y="54" width="33" height="30"/>
+                                <state key="normal" title="Çıkış">
+                                    <color key="titleColor" red="0.96470588239999999" green="0.43529411759999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonAction:" destination="74i-NX-M65" eventType="touchUpInside" id="7DT-B8-aK9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Zy-NX-uVl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="OQa-UL-pwK" firstAttribute="centerY" secondItem="5Dy-lc-Wrx" secondAttribute="centerY" id="X6j-A3-sKx"/>
+                            <constraint firstItem="1Zy-NX-uVl" firstAttribute="trailing" secondItem="Ifd-gh-HPH" secondAttribute="trailing" constant="26" id="XbU-ub-dgg"/>
                             <constraint firstItem="jXK-rp-ykp" firstAttribute="top" secondItem="5Dy-lc-Wrx" secondAttribute="bottom" constant="20" id="d6q-AA-V74"/>
+                            <constraint firstItem="Ifd-gh-HPH" firstAttribute="top" secondItem="5Dy-lc-Wrx" secondAttribute="top" id="f3H-ir-QPb"/>
                             <constraint firstItem="5Dy-lc-Wrx" firstAttribute="leading" secondItem="1Zy-NX-uVl" secondAttribute="leading" constant="20" id="ivC-gw-MHM"/>
                             <constraint firstItem="jXK-rp-ykp" firstAttribute="leading" secondItem="1Zy-NX-uVl" secondAttribute="leading" constant="16" id="jlE-7u-xDr"/>
                             <constraint firstItem="1Zy-NX-uVl" firstAttribute="trailing" secondItem="jXK-rp-ykp" secondAttribute="trailing" constant="16" id="luC-lT-phA"/>
                             <constraint firstItem="1Zy-NX-uVl" firstAttribute="trailing" secondItem="OQa-UL-pwK" secondAttribute="trailing" constant="20" id="sjL-re-hHV"/>
                             <constraint firstItem="OQa-UL-pwK" firstAttribute="leading" secondItem="5Dy-lc-Wrx" secondAttribute="trailing" constant="8" symbolic="YES" id="w59-pS-Y6o"/>
-                            <constraint firstItem="5Dy-lc-Wrx" firstAttribute="top" secondItem="1Zy-NX-uVl" secondAttribute="top" constant="20" id="wEO-kw-G3K"/>
+                            <constraint firstItem="5Dy-lc-Wrx" firstAttribute="top" secondItem="1Zy-NX-uVl" secondAttribute="top" constant="10" id="wEO-kw-G3K"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="OJS-ow-tTA"/>

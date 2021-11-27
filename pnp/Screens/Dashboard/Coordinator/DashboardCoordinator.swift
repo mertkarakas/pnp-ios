@@ -38,7 +38,14 @@ final class DashboardCoordinator: CoordinatorProtocol {
         let dashboardViewController: DashboardViewController = .instantiate()
         dashboardViewController.viewModel = dashboardViewModel
         dashboardViewController.navigationItem.removeBackBarButtonTitle()
+
+
+        let profileViewModel = ProfileViewModel()
+        profileViewModel.coordinatorDelegate = self
+
         let profile: ProfileViewController = .instantiate()
+        profile.viewModel = profileViewModel
+
         tabBarController.setViewControllers([dashboardViewController, campaignViewController, profile], animated: false)
 
         navigationController.setViewControllers([tabBarController], animated: false)
@@ -63,5 +70,13 @@ extension DashboardCoordinator: CampaignCoordinatorDelegate {
     }
 
     func goToSignIn() {
+    }
+}
+
+extension DashboardCoordinator: ProfileCoordinatorDelegate {
+    func logout() {
+        let preloginCoordinator = PreLoginCoordinator(navController: navigationController, dependency: dependency)
+        childCoordinators.append(preloginCoordinator)
+        preloginCoordinator.start()
     }
 }

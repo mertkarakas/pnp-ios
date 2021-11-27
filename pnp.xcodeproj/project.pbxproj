@@ -63,6 +63,8 @@
 		250D89002751E16F00C859BC /* SplashViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88FF2751E16F00C859BC /* SplashViewControllerTests.swift */; };
 		250D89082751EA7600C859BC /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D89072751EA7600C859BC /* CoreDataManager.swift */; };
 		250D89172751ED7800C859BC /* PnpApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 250D89152751ED7800C859BC /* PnpApp.xcdatamodeld */; };
+		254AF4B12751FD35004D47D4 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AF4B02751FD35004D47D4 /* ProfileViewModel.swift */; };
+		254AF4B42751FD61004D47D4 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AF4B32751FD61004D47D4 /* ProfileCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +151,8 @@
 		250D88FF2751E16F00C859BC /* SplashViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerTests.swift; sourceTree = "<group>"; };
 		250D89072751EA7600C859BC /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		250D89162751ED7800C859BC /* PnpApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PnpApp.xcdatamodel; sourceTree = "<group>"; };
+		254AF4B02751FD35004D47D4 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		254AF4B32751FD61004D47D4 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -504,7 +508,9 @@
 		250D88892751A12D00C859BC /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				250D888A2751A13800C859BC /* ProfileViewController.swift */,
+				254AF4B62751FDFB004D47D4 /* Coordinator */,
+				254AF4B72751FE00004D47D4 /* View */,
+				254AF4B82751FE03004D47D4 /* ViewModel */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -683,6 +689,30 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		254AF4B62751FDFB004D47D4 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				254AF4B32751FD61004D47D4 /* ProfileCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		254AF4B72751FE00004D47D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				250D888A2751A13800C859BC /* ProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		254AF4B82751FE03004D47D4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				254AF4B02751FD35004D47D4 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -794,12 +824,14 @@
 				250D88482751835D00C859BC /* CampaignViewModel.swift in Sources */,
 				250D886C2751914E00C859BC /* GeneralConstants.swift in Sources */,
 				250D882E27517BD400C859BC /* SliderItemCollectionViewCell.swift in Sources */,
+				254AF4B42751FD61004D47D4 /* ProfileCoordinator.swift in Sources */,
 				250D882A27517B4700C859BC /* UINavigationItem+Extensions.swift in Sources */,
 				250D882727517B2300C859BC /* UIBarButtonItem+Extensions.swift in Sources */,
 				250D89172751ED7800C859BC /* PnpApp.xcdatamodeld in Sources */,
 				250D886827518FBD00C859BC /* LoginCoordinator.swift in Sources */,
 				250D884E2751835D00C859BC /* CampaignCollectionViewCell.swift in Sources */,
 				250D884C2751835D00C859BC /* CampaignModel.swift in Sources */,
+				254AF4B12751FD35004D47D4 /* ProfileViewModel.swift in Sources */,
 				250D88492751835D00C859BC /* CampaignCoordinator.swift in Sources */,
 				250D884F2751835D00C859BC /* CampaignViewController.swift in Sources */,
 				250D886127518F8E00C859BC /* LoginViewController.swift in Sources */,

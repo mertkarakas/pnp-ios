@@ -9,6 +9,8 @@ import UIKit
 
 final class ProfileViewController: UIViewController {
 
+    var viewModel: ProfileViewModelProtocol!
+
     @IBOutlet weak var usernameLabel: UILabel!
 
     override func viewDidLoad() {
@@ -18,5 +20,9 @@ final class ProfileViewController: UIViewController {
 
     private func prepareUI() {
         view.backgroundColor = .background
+    }
+
+    @IBAction func logoutButtonAction(_ sender: Any) {
+        viewModel.logout()
     }
 }
