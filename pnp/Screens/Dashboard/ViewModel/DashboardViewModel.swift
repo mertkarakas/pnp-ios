@@ -9,7 +9,8 @@ final class DashboardViewModel {
 
     weak var coordinatorDelegate: DashboardCoordinatorDelegate?
 
-    let banners = ["banner1", "banner1", "mobile-hackathon", "mobile-hackathon"]
+    #warning("will retrieve from the service")
+    let banners = ["Banner 1", "Banner 2", "Banner 3", "Banner 4", "Banner 5", "Banner 6", "Banner 7", "Banner 8"]
 
     func goToNewCampaign() {
         coordinatorDelegate?.goToNewCampaign()

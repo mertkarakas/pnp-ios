@@ -10,6 +10,7 @@ protocol PreLoginViewModelProtocol: AnyObject {
 
     func showCampaignAction()
     func goToSignIn()
+    func goToRegister()
 }
 
 final class PreLoginViewModel: PreLoginViewModelProtocol {
@@ -17,7 +18,7 @@ final class PreLoginViewModel: PreLoginViewModelProtocol {
     weak var coordinatorDelegate: PreLoginCoordinatorDelegate?
 
     #warning("will retrieve from the service")
-    let banners = ["seffaf1", "seffaf5", "seffaf4", "seffaf3", "seffaf2"]
+    let banners = ["Banner 1", "Banner 2", "Banner 3", "Banner 4", "Banner 5", "Banner 6", "Banner 7", "Banner 8"]
 
     func showCampaignAction() {
         coordinatorDelegate?.goToCampaigns()
@@ -25,5 +26,9 @@ final class PreLoginViewModel: PreLoginViewModelProtocol {
 
     func goToSignIn() {
         coordinatorDelegate?.goToSignIn()
+    }
+
+    func goToRegister() {
+        coordinatorDelegate?.goToRegister()
     }
 }

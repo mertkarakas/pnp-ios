@@ -40,6 +40,12 @@ final class CampaignDetailCoordinator: CoordinatorProtocol {
 
 extension CampaignDetailCoordinator: CampaignDetailCoordinatorDelegate {
     func goToDonate(model: CampaignModel) {
+        guard let user = user else {
+            let loginCoordinator = LoginCoordinator(navController: navigationController, dependency: dependency)
+            childCoordinators.append(loginCoordinator)
+            loginCoordinator.start()
+            return
+        }
         let donateCoordinator = DonateCoordinator(navController: navigationController, dependency: dependency, model: model, user: user)
         childCoordinators.append(donateCoordinator)
         donateCoordinator.start()

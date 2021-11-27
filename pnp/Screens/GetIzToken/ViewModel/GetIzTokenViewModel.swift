@@ -22,7 +22,8 @@ final class GetIzTokenViewModel {
     func getIzToken(with amount: String?) {
         guard let amount = amount,
               let intAmount = Int32(amount),
-              let user = user else {
+              let user = user,
+              intAmount > 0 else {
             return
         }
 

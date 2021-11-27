@@ -10,6 +10,7 @@ import UIKit
 protocol PreLoginCoordinatorDelegate: AnyObject {
     func goToCampaigns()
     func goToSignIn()
+    func goToRegister()
 }
 
 final class PreLoginCoordinator: CoordinatorProtocol {
@@ -32,6 +33,12 @@ final class PreLoginCoordinator: CoordinatorProtocol {
         preloginViewController.viewModel = preLoginViewModel
         navigationController.setViewControllers([preloginViewController], animated: false)
     }
+
+    func didFinishChild(_ coordinator: CoordinatorProtocol) {
+        if let index = childCoordinators.firstIndex(where: {$0 === coordinator}) {
+            childCoordinators.remove(at: index)
+        }
+    }
 }
 
 extension PreLoginCoordinator: PreLoginCoordinatorDelegate {
@@ -48,6 +55,12 @@ extension PreLoginCoordinator: PreLoginCoordinatorDelegate {
         let loginCoordinator = LoginCoordinator(navController: navigationController, dependency: dependency)
         childCoordinators.append(loginCoordinator)
         loginCoordinator.start()
+    }
+
+    func goToRegister() {
+        let registerCoordinator = RegisterCoordinator(navController: navigationController, dependency: dependency)
+        childCoordinators.append(registerCoordinator)
+        registerCoordinator.start()
     }
 
     func didFinishPreLogin() {

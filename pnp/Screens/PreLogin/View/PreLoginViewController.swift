@@ -74,7 +74,7 @@ final class PreLoginViewController: UIViewController {
     }
 
     @IBAction func newAccountButtonAction(_ sender: Any) {
-        viewModel.goToSignIn()
+        viewModel.goToRegister()
     }
 }
 

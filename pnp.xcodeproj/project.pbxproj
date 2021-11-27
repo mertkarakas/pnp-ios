@@ -74,6 +74,9 @@
 		254AF4E027523685004D47D4 /* DonateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AF4DF27523685004D47D4 /* DonateCoordinator.swift */; };
 		254AF4E427523691004D47D4 /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AF4E327523691004D47D4 /* DonateViewController.swift */; };
 		254AF4E72752369E004D47D4 /* DonateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AF4E62752369E004D47D4 /* DonateViewModel.swift */; };
+		254AF4EE27524C1A004D47D4 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AF4ED27524C1A004D47D4 /* RegisterCoordinator.swift */; };
+		254AF4F227524C24004D47D4 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AF4F127524C24004D47D4 /* RegisterViewModel.swift */; };
+		254AF4F527524C33004D47D4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AF4F427524C33004D47D4 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +174,9 @@
 		254AF4DF27523685004D47D4 /* DonateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateCoordinator.swift; sourceTree = "<group>"; };
 		254AF4E327523691004D47D4 /* DonateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
 		254AF4E62752369E004D47D4 /* DonateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewModel.swift; sourceTree = "<group>"; };
+		254AF4ED27524C1A004D47D4 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		254AF4F127524C24004D47D4 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		254AF4F427524C33004D47D4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,6 +421,7 @@
 				254AF4BB275209A1004D47D4 /* GetIzToken */,
 				250D88362751835D00C859BC /* Campaign */,
 				250D887B27519E9C00C859BC /* Dashboard */,
+				254AF4E927524BF0004D47D4 /* Register */,
 				250D885B27518F5C00C859BC /* Login */,
 				250D88982751BE7C00C859BC /* NewCampaign */,
 				250D88892751A12D00C859BC /* Profile */,
@@ -844,6 +851,40 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		254AF4E927524BF0004D47D4 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				254AF4EC27524C0B004D47D4 /* Coordinator */,
+				254AF4EB27524C06004D47D4 /* ViewModel */,
+				254AF4EA27524C03004D47D4 /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		254AF4EA27524C03004D47D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				254AF4F427524C33004D47D4 /* RegisterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		254AF4EB27524C06004D47D4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				254AF4F127524C24004D47D4 /* RegisterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		254AF4EC27524C0B004D47D4 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				254AF4ED27524C1A004D47D4 /* RegisterCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -976,6 +1017,7 @@
 				250D888B2751A13800C859BC /* ProfileViewController.swift in Sources */,
 				250D88592751871800C859BC /* ListFlowLayout.swift in Sources */,
 				254AF4CD27521129004D47D4 /* GetIzTokenResultViewController.swift in Sources */,
+				254AF4EE27524C1A004D47D4 /* RegisterCoordinator.swift in Sources */,
 				250D888027519ECB00C859BC /* DashboardCoordinator.swift in Sources */,
 				250D884B2751835D00C859BC /* CampaignDetailViewController.swift in Sources */,
 				254AF4D227521318004D47D4 /* GetIzTokenResultCoordinator.swift in Sources */,
@@ -993,8 +1035,10 @@
 				250D881F27517A3900C859BC /* PreLoginViewModel.swift in Sources */,
 				250D881C27517A2D00C859BC /* PreLoginViewController.swift in Sources */,
 				250D886527518FAA00C859BC /* LoginViewModel.swift in Sources */,
+				254AF4F227524C24004D47D4 /* RegisterViewModel.swift in Sources */,
 				250D88BC2751D33100C859BC /* SplashCoordinator.swift in Sources */,
 				250D88A12751BED000C859BC /* NewCampaignViewModel.swift in Sources */,
+				254AF4F527524C33004D47D4 /* RegisterViewController.swift in Sources */,
 				250D88A82751C52800C859BC /* PrimaryButton.swift in Sources */,
 				250D888727519EDD00C859BC /* DashboardViewModel.swift in Sources */,
 			);

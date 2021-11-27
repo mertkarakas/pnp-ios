@@ -21,6 +21,7 @@ final class DonateViewModel {
         guard let amount = amountText,
               let amountInteger = Int32(amount),
               let userId = user,
+              amountInteger > 0,
               amountInteger <= userId.izToken else {
             return false
         }
@@ -31,6 +32,7 @@ final class DonateViewModel {
         guard let amount = amountText,
               let amountInteger = Int32(amount),
               let userId = user,
+              amountInteger > 0,
               amountInteger <= userId.izToken else {
             return
         }

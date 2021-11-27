@@ -22,13 +22,13 @@ final class CampaignViewModel: CampaignViewModelProtocol {
               description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu sodales nisi. Nam eget risus convallis, euismod lectus sed, feugiat mauris.",
               maxAmount: 2000,
               reachedAmount: 1500,
-              image: "campaign1"
+              image: "c1"
         ),
         .init(title:"Consectetur adipiscing elit.",
               description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu sodales nisi. Nam eget risus convallis, euismod lectus sed, feugiat mauris.",
               maxAmount: 2000,
               reachedAmount: 1800,
-              image: "campaign2"
+              image: "c2"
         )
     ]
 
