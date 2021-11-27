@@ -22,6 +22,7 @@ final class CampaignDetailViewController: UIViewController {
     private func prepareUI() {
         let item = viewModel.item
         detailImageView.image = UIImage(named: item.image)
+        detailImageView.layer.cornerRadius = 4
         titleLabel.text = item.title
         descriptionLabel.text = item.description
     }
