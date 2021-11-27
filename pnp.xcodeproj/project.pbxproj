@@ -122,8 +122,8 @@
 		250D87ED2751749F00C859BC /* pnp */ = {
 			isa = PBXGroup;
 			children = (
-				250D886A2751913700C859BC /* Constants */,
 				250D88052751754F00C859BC /* App */,
+				250D886A2751913700C859BC /* Constants */,
 				250D88092751766A00C859BC /* Extensions */,
 				250D88062751756D00C859BC /* Resources */,
 				250D88512751836800C859BC /* Screens */,
@@ -156,11 +156,11 @@
 		250D88092751766A00C859BC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				250D880A2751767B00C859BC /* UIViewController+Extensions.swift */,
-				250D882627517B2300C859BC /* UIBarButtonItem+Extensions.swift */,
-				250D882927517B4700C859BC /* UINavigationItem+Extensions.swift */,
 				250D88532751840600C859BC /* Decimal+Extensions.swift */,
+				250D882627517B2300C859BC /* UIBarButtonItem+Extensions.swift */,
 				250D88922751B74A00C859BC /* UIColor+Extensions.swift */,
+				250D882927517B4700C859BC /* UINavigationItem+Extensions.swift */,
+				250D880A2751767B00C859BC /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -202,10 +202,10 @@
 		250D882427517B0600C859BC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				250D88A62751C51D00C859BC /* Model */,
-				250D886E2751929D00C859BC /* TableViewCell */,
 				250D883227517FDA00C859BC /* CollectionViewCell */,
 				250D8857275186D900C859BC /* FlowLayout */,
+				250D88A62751C51D00C859BC /* Model */,
+				250D886E2751929D00C859BC /* TableViewCell */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -317,11 +317,11 @@
 		250D88512751836800C859BC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				250D88982751BE7C00C859BC /* NewCampaign */,
-				250D88892751A12D00C859BC /* Profile */,
+				250D88362751835D00C859BC /* Campaign */,
 				250D887B27519E9C00C859BC /* Dashboard */,
 				250D885B27518F5C00C859BC /* Login */,
-				250D88362751835D00C859BC /* Campaign */,
+				250D88982751BE7C00C859BC /* NewCampaign */,
+				250D88892751A12D00C859BC /* Profile */,
 				250D8816275179C200C859BC /* PreLogin */,
 			);
 			path = Screens;
