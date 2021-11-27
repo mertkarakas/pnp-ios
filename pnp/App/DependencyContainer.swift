@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import Service
 
 final class DependencyContainer {
 
     let window: UIWindow
+    private let serviceManager: ServiceManager
 
-    init(window: UIWindow) {
+    init(window: UIWindow, serviceManager: ServiceManager) {
         self.window = window
+        self.serviceManager = serviceManager
     }
 }

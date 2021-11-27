@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Service
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,10 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         UITabBar.appearance().tintColor = .primary
+
         let window = UIWindow()
         self.window = window
 
-        let dependency = DependencyContainer(window: window)
+        let serviceManager = ServiceManager()
+
+        let dependency = DependencyContainer(window: window, serviceManager: serviceManager)
         appCoordinator = AppCoordinator(dependency: dependency)
         appCoordinator?.start()
 
