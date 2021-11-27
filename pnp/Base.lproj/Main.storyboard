@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -213,7 +212,7 @@
                                             <constraint firstAttribute="width" constant="32" id="OHh-mC-09F"/>
                                             <constraint firstAttribute="height" constant="32" id="cja-Lu-q61"/>
                                         </constraints>
-                                        <color key="tintColor" name="AccentColor"/>
+                                        <color key="tintColor" red="0.96470588239999999" green="0.43529411759999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal">
                                             <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="large"/>
                                         </state>
@@ -237,6 +236,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mkf-QA-0fB" customClass="PrimaryButton" customModule="pnp" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="461" width="378" height="30"/>
+                                        <state key="normal" title="Destek Ol"/>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="h3D-Lz-Nil" firstAttribute="leading" secondItem="H75-eB-3WH" secondAttribute="leading" constant="20" id="IZ0-U0-YY2"/>
@@ -245,12 +248,16 @@
                                     <constraint firstItem="h3D-Lz-Nil" firstAttribute="centerX" secondItem="H75-eB-3WH" secondAttribute="centerX" id="PLX-VV-VSp"/>
                                     <constraint firstItem="w2O-3I-1ed" firstAttribute="leading" secondItem="H75-eB-3WH" secondAttribute="leading" constant="20" id="Pvy-Ix-Ytz"/>
                                     <constraint firstItem="w2O-3I-1ed" firstAttribute="top" secondItem="h3D-Lz-Nil" secondAttribute="bottom" constant="20" id="Qmr-BL-COZ"/>
+                                    <constraint firstItem="Mkf-QA-0fB" firstAttribute="leading" secondItem="H75-eB-3WH" secondAttribute="leading" constant="20" id="SEm-dV-Tv6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mkf-QA-0fB" secondAttribute="trailing" constant="20" id="Y3F-2D-VuT"/>
                                     <constraint firstAttribute="trailing" secondItem="EZL-xk-Jyg" secondAttribute="trailing" constant="16" id="asz-Bk-gTo"/>
                                     <constraint firstAttribute="trailing" secondItem="pZ6-eF-3BK" secondAttribute="trailing" constant="20" id="cVX-aH-r0G"/>
                                     <constraint firstItem="pZ6-eF-3BK" firstAttribute="top" secondItem="w2O-3I-1ed" secondAttribute="bottom" constant="8" symbolic="YES" id="exo-kz-M3a"/>
                                     <constraint firstItem="pZ6-eF-3BK" firstAttribute="leading" secondItem="H75-eB-3WH" secondAttribute="leading" constant="20" id="j7n-QY-tRw"/>
                                     <constraint firstAttribute="trailing" secondItem="h3D-Lz-Nil" secondAttribute="trailing" constant="20" id="jkD-Um-2Qb"/>
+                                    <constraint firstItem="Mkf-QA-0fB" firstAttribute="top" secondItem="pZ6-eF-3BK" secondAttribute="bottom" constant="40" id="jma-Ef-4NX"/>
                                     <constraint firstItem="h3D-Lz-Nil" firstAttribute="top" secondItem="H75-eB-3WH" secondAttribute="top" constant="53" id="obp-N8-exU"/>
+                                    <constraint firstItem="Mkf-QA-0fB" firstAttribute="centerX" secondItem="H75-eB-3WH" secondAttribute="centerX" id="qEN-7v-evA"/>
                                     <constraint firstAttribute="trailing" secondItem="w2O-3I-1ed" secondAttribute="trailing" constant="20" id="zRS-Lm-5Id"/>
                                 </constraints>
                             </scrollView>
@@ -282,8 +289,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KwN-Kk-aGi">
+                                <rect key="frame" x="0.0" y="44" width="414" height="358.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Ne1-mL-FXO">
+                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SliderCell" id="643-Ek-wPj">
+                                        <rect key="frame" x="0.0" y="79.5" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="23l-jS-lZ0">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="wwR-pP-QNZ">
+                                <rect key="frame" x="145.5" y="354.5" width="123" height="28"/>
+                            </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5j-4Y-5F6" customClass="PrimaryButton" customModule="pnp" customModuleProvider="target">
-                                <rect key="frame" x="145.5" y="84" width="123" height="30"/>
+                                <rect key="frame" x="145.5" y="422.5" width="123" height="30"/>
                                 <state key="normal" title="İyilik Zinciri Başlat"/>
                                 <connections>
                                     <action selector="buttonAction:" destination="xav-An-xnh" eventType="touchUpInside" id="Ms0-vv-ldv"/>
@@ -291,15 +321,23 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l53-PW-e4K"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="J5j-4Y-5F6" firstAttribute="top" secondItem="l53-PW-e4K" secondAttribute="top" constant="40" id="TjI-Wc-Bpn"/>
+                            <constraint firstItem="J5j-4Y-5F6" firstAttribute="top" secondItem="KwN-Kk-aGi" secondAttribute="bottom" constant="20" id="89k-OV-ZkP"/>
+                            <constraint firstItem="KwN-Kk-aGi" firstAttribute="trailing" secondItem="l53-PW-e4K" secondAttribute="trailing" id="DOt-cA-2BF"/>
+                            <constraint firstItem="KwN-Kk-aGi" firstAttribute="height" secondItem="fSd-kx-40c" secondAttribute="height" multiplier="0.400112" id="Jvi-gY-G0k"/>
+                            <constraint firstItem="KwN-Kk-aGi" firstAttribute="leading" secondItem="l53-PW-e4K" secondAttribute="leading" id="PNM-2z-34O"/>
+                            <constraint firstItem="KwN-Kk-aGi" firstAttribute="top" secondItem="l53-PW-e4K" secondAttribute="top" id="QTA-q0-Oyz"/>
+                            <constraint firstItem="KwN-Kk-aGi" firstAttribute="bottom" secondItem="wwR-pP-QNZ" secondAttribute="bottom" constant="20" id="XNt-Ba-LbR"/>
+                            <constraint firstItem="wwR-pP-QNZ" firstAttribute="centerX" secondItem="fSd-kx-40c" secondAttribute="centerX" id="wkc-bQ-2tI"/>
                             <constraint firstItem="J5j-4Y-5F6" firstAttribute="centerX" secondItem="fSd-kx-40c" secondAttribute="centerX" id="wxM-Kb-YfN"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Anasayfa" image="list.bullet.rectangle" catalog="system" id="E2V-no-MTu"/>
                     <connections>
                         <outlet property="newCampaignButton" destination="J5j-4Y-5F6" id="4kL-bd-iZe"/>
+                        <outlet property="pageControl" destination="wwR-pP-QNZ" id="4qE-bf-RAR"/>
+                        <outlet property="sliderCollectionView" destination="KwN-Kk-aGi" id="bRd-BD-Q1y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OrF-O1-9Us" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -446,6 +484,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circlebadge.2.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QDH-jv-Zqc">
                                                 <rect key="frame" x="0.0" y="2.5" width="32" height="27"/>
+                                                <color key="tintColor" red="0.96470588239999999" green="0.43529411759999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="BFL-3p-6UW"/>
                                                     <constraint firstAttribute="width" constant="32" id="H5y-ux-m9J"/>
@@ -453,14 +492,16 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="125" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkO-Og-nIc">
                                                 <rect key="frame" x="0.0" y="39" width="36.5" height="26.5"/>
+                                                <color key="tintColor" red="0.96470588239999999" green="0.43529411759999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                                <color key="textColor" name="AccentColor"/>
+                                                <color key="textColor" red="0.96470588239999999" green="0.43529411759999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="İyilik Puanı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGs-4y-2Zv">
                                                 <rect key="frame" x="0.0" y="72.5" width="76" height="19.5"/>
+                                                <color key="tintColor" red="0.96470588239999999" green="0.43529411759999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" name="AccentColor"/>
+                                                <color key="textColor" red="0.96470588239999999" green="0.43529411759999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -470,6 +511,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoinsign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ks0-jh-tdw">
                                                 <rect key="frame" x="0.0" y="0.5" width="32" height="31"/>
+                                                <color key="tintColor" red="0.96470588239999999" green="0.43529411759999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="BSD-wO-rpC"/>
                                                     <constraint firstAttribute="width" constant="32" id="q9j-Ub-CHW"/>
@@ -478,13 +520,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="990" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APh-7o-jt9">
                                                 <rect key="frame" x="0.0" y="39" width="41.5" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                                <color key="textColor" name="AccentColor"/>
+                                                <color key="textColor" red="0.96470588239999999" green="0.43529411759999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İzToken" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rt-so-dy5">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IzToken" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rt-so-dy5">
                                                 <rect key="frame" x="0.0" y="72.5" width="55" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" name="AccentColor"/>
+                                                <color key="textColor" red="0.96470588239999999" green="0.43529411759999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -494,6 +536,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face.smiling" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KbX-zY-pn6">
                                                 <rect key="frame" x="0.0" y="0.5" width="32" height="31"/>
+                                                <color key="tintColor" red="0.96470588239999999" green="0.43529411759999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="pER-bV-Kv3"/>
                                                     <constraint firstAttribute="width" constant="32" id="rtA-SG-Wzr"/>
@@ -502,13 +545,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lX-ls-UsU">
                                                 <rect key="frame" x="0.0" y="39" width="20.5" height="26.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                                <color key="textColor" name="AccentColor"/>
+                                                <color key="textColor" red="0.96470588239999999" green="0.43529411759999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="İyilik Sayısı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4c-xq-NsK">
                                                 <rect key="frame" x="0.0" y="72.5" width="78" height="19.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" name="AccentColor"/>
+                                                <color key="textColor" red="0.96470588239999999" green="0.43529411759999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -546,6 +589,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BaJ-qm-4E8">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.96470588239999999" green="0.43529411759999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="xav-An-xnh" kind="relationship" relationship="viewControllers" id="R5F-VL-HLZ"/>
@@ -567,9 +611,6 @@
         <image name="newspaper" catalog="system" width="128" height="108"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

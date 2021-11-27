@@ -10,8 +10,13 @@ import UIKit
 final class ProfileViewController: UIViewController {
 
     @IBOutlet weak var usernameLabel: UILabel!
-    override func viewDidLoad() {
 
+    override func viewDidLoad() {
         super.viewDidLoad()
+        prepareUI()
+    }
+
+    private func prepareUI() {
+        view.backgroundColor = .background
     }
 }

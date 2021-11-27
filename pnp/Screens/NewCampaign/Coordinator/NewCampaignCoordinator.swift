@@ -24,7 +24,7 @@ final class NewCampaignCoordinator: CoordinatorProtocol {
         let newCampaignViewController: NewCampaignViewController = .instantiate()
         newCampaignViewController.viewModel = newCampaignViewModel
         newCampaignViewController.navigationItem.removeBackBarButtonTitle()
-        navigationController.show(newCampaignViewController, sender: nil)
+        navigationController.present(newCampaignViewController, animated: true, completion: nil)
     }
 }
 

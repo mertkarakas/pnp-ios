@@ -51,7 +51,11 @@ extension DashboardCoordinator: DashboardCoordinatorDelegate {
 
 extension DashboardCoordinator: CampaignCoordinatorDelegate {
     func goToDetail(with item: CampaignModel) {
+        let campaignDetailViewModel = CampaignDetailViewModel(item: item)
+        let campaignDetailViewController: CampaignDetailViewController = .instantiate()
+        campaignDetailViewController.viewModel = campaignDetailViewModel
 
+        navigationController.present(campaignDetailViewController, animated: true, completion: nil)
     }
 
     func goToSignIn() {
