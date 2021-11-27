@@ -9,6 +9,7 @@ import UIKit
 
 protocol DashboardCoordinatorDelegate: AnyObject {
     func goToNewCampaign()
+    func switchTabs()
 }
 
 final class DashboardCoordinator: CoordinatorProtocol {
@@ -16,6 +17,7 @@ final class DashboardCoordinator: CoordinatorProtocol {
     private let dependency: DependencyContainer
     private let user: User
     let navigationController: UINavigationController
+    let tabBarController = UITabBarController()
 
     init(navController: UINavigationController, dependency: DependencyContainer, user: User) {
         self.navigationController = navController
@@ -24,8 +26,8 @@ final class DashboardCoordinator: CoordinatorProtocol {
     }
 
     func start() {
-        let tabBarController = UITabBarController()
-        let campaignViewModel = CampaignViewModel()
+        
+        let campaignViewModel = CampaignViewModel(coreDataManager: dependency.coreDataManager)
         let tabBar = UITabBarItem(title: GeneralConstants.campaigns, image: UIImage(systemName: "newspaper.fill"), tag: 0)
         campaignViewModel.coordinatorDelegate = self
         let campaignViewController: CampaignViewController = .instantiate()
@@ -58,10 +60,14 @@ extension DashboardCoordinator: DashboardCoordinatorDelegate {
         childCoordinators.append(coordinator)
         coordinator.start()
     }
+
+    func switchTabs() {
+        tabBarController.selectedIndex = 1
+    }
 }
 
 extension DashboardCoordinator: CampaignCoordinatorDelegate {
-    func goToDetail(with item: CampaignModel) {
+    func goToDetail(with item: Campaign) {
         let campaignDetailCoordinator = CampaignDetailCoordinator(navController: navigationController, dependency: dependency, campaignModel: item, user: user)
         childCoordinators.append(campaignDetailCoordinator)
         campaignDetailCoordinator.start()

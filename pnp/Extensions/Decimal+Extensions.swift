@@ -17,6 +17,6 @@ extension Decimal {
         guard let str = string else {
             return nil
         }
-        return str + " IzToken"
+        return str + " IZT"
     }
 }

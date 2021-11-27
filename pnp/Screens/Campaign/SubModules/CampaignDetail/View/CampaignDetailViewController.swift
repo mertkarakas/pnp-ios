@@ -21,10 +21,12 @@ final class CampaignDetailViewController: UIViewController {
 
     private func prepareUI() {
         let item = viewModel.item
-        detailImageView.image = UIImage(named: item.image)
+        if let data = item.imageData {
+            detailImageView.image = UIImage(data: data)
+        }
         detailImageView.layer.cornerRadius = 4
         titleLabel.text = item.title
-        descriptionLabel.text = item.description
+        descriptionLabel.text = item.subtitle
     }
 
     @IBAction func shareAction(_ sender: Any) {

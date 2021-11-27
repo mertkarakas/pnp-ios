@@ -9,10 +9,10 @@ final class DonateViewModel {
 
     weak var coordinatorDelegate: DonateCoordinatorDelegate?
 
-    let model: CampaignModel
+    let model: Campaign
     let user: User?
 
-    init(model: CampaignModel, user: User?) {
+    init(model: Campaign, user: User?) {
         self.model = model
         self.user = user
     }

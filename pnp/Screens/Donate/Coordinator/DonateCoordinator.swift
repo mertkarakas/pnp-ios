@@ -16,10 +16,10 @@ final class DonateCoordinator: CoordinatorProtocol {
     private(set) var childCoordinators: [CoordinatorProtocol] = []
     private let dependency: DependencyContainer
     let navigationController: UINavigationController
-    private let model: CampaignModel
+    private let model: Campaign
     private let user: User?
 
-    init(navController: UINavigationController, dependency: DependencyContainer, model: CampaignModel, user: User?) {
+    init(navController: UINavigationController, dependency: DependencyContainer, model: Campaign, user: User?) {
         self.navigationController = navController
         self.dependency = dependency
         self.model = model

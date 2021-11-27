@@ -8,14 +8,14 @@
 import Foundation
 
 struct CampaignModel {
-    let title: String
-    let description: String
-    let maxAmount: Decimal
-    let reachedAmount: Decimal
-    let image: String
+    let title: String?
+    let description: String?
+    let maxAmount: Decimal?
+    let reachedAmount: Decimal?
+    let image: Data?
 
     func calculatedProgress() -> Float {
-        NSDecimalNumber(decimal: reachedAmount).floatValue / NSDecimalNumber(decimal: maxAmount).floatValue 
+        NSDecimalNumber(decimal: reachedAmount ?? 0).floatValue / NSDecimalNumber(decimal: maxAmount ?? 0).floatValue 
     }
 
     func percentage() -> Int {

@@ -15,4 +15,8 @@ final class DashboardViewModel {
     func goToNewCampaign() {
         coordinatorDelegate?.goToNewCampaign()
     }
+
+    func allCampaigns() {
+        coordinatorDelegate?.switchTabs()
+    }
 }

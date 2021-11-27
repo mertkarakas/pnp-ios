@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CampaignCollectionCellDelegate: AnyObject {
-    func didSelectItem(with item: CampaignModel)
+    func didSelectItem(with item: Campaign)
 }
 
 final class CampaignViewController: UIViewController {
@@ -32,12 +32,18 @@ final class CampaignViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewModel.delegate = self
         view.backgroundColor = .background
         campaignCollectionView.register(UINib(nibName: Constants.campaignCollectionViewNibName, bundle: .main), forCellWithReuseIdentifier: Constants.campaignCollectionViewReuseIdentifier)
         campaignCollectionView.setCollectionViewLayout(ListFlowLayout(), animated: false)
         campaignCollectionView.delegate = self
         campaignCollectionView.dataSource = self
+    }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        viewModel.refreshItems()
     }
 
     // MARK: - Actions
@@ -70,5 +76,12 @@ extension CampaignViewController: UICollectionViewDataSource, UICollectionViewDe
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.didSelectItem(with: viewModel.models[indexPath.row])
         viewModel.didSelectItem(at: indexPath.row)
+    }
+}
+
+extension CampaignViewController: CampaignViewModelOutput {
+
+    func refreshCollection() {
+        self.campaignCollectionView.reloadData()
     }
 }

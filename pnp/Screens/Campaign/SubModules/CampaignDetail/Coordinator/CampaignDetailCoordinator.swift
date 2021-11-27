@@ -9,17 +9,17 @@
 import UIKit
 
 protocol CampaignDetailCoordinatorDelegate: AnyObject {
-    func goToDonate(model: CampaignModel)
+    func goToDonate(model: Campaign)
 }
 
 final class CampaignDetailCoordinator: CoordinatorProtocol {
     private(set) var childCoordinators: [CoordinatorProtocol] = []
     private let dependency: DependencyContainer
     let navigationController: UINavigationController
-    private let campaignModel: CampaignModel
+    private let campaignModel: Campaign
     private let user: User?
 
-    init(navController: UINavigationController, dependency: DependencyContainer, campaignModel: CampaignModel, user: User?) {
+    init(navController: UINavigationController, dependency: DependencyContainer, campaignModel: Campaign, user: User?) {
         self.navigationController = navController
         self.dependency = dependency
         self.campaignModel = campaignModel
@@ -39,7 +39,7 @@ final class CampaignDetailCoordinator: CoordinatorProtocol {
 }
 
 extension CampaignDetailCoordinator: CampaignDetailCoordinatorDelegate {
-    func goToDonate(model: CampaignModel) {
+    func goToDonate(model: Campaign) {
         guard let user = user else {
             let loginCoordinator = LoginCoordinator(navController: navigationController, dependency: dependency)
             childCoordinators.append(loginCoordinator)

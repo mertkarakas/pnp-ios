@@ -45,6 +45,9 @@ final class DashboardViewController: UIViewController {
     @IBAction func buttonAction(_ sender: Any) {
         viewModel.goToNewCampaign()
     }
+    @IBAction func allCampaignsButtonAction(_ sender: Any) {
+        viewModel.allCampaigns()
+    }
 }
 
 // MARK: - UICollectionViewDataSource

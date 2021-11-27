@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CampaignCoordinatorDelegate: AnyObject {
-    func goToDetail(with item: CampaignModel)
+    func goToDetail(with item: Campaign)
     func goToSignIn()
 }
 
@@ -23,7 +23,7 @@ final class CampaignCoordinator: CoordinatorProtocol {
     }
 
     func start() {
-        let campaignViewModel = CampaignViewModel()
+        let campaignViewModel = CampaignViewModel(coreDataManager: dependency.coreDataManager)
         campaignViewModel.coordinatorDelegate = self
         let campaignViewController: CampaignViewController = .instantiate()
         campaignViewController.viewModel = campaignViewModel
@@ -33,7 +33,7 @@ final class CampaignCoordinator: CoordinatorProtocol {
 }
 
 extension CampaignCoordinator: CampaignCoordinatorDelegate {
-    func goToDetail(with item: CampaignModel) {
+    func goToDetail(with item: Campaign) {
         let campaignDetailCoordinator = CampaignDetailCoordinator(navController: navigationController, dependency: dependency, campaignModel: item, user: nil)
         childCoordinators.append(campaignDetailCoordinator)
         campaignDetailCoordinator.start()

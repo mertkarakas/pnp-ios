@@ -21,11 +21,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="341" height="181"/>
                     </imageView>
                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hw7-hV-oxu">
-                        <rect key="frame" x="12" y="239" width="150" height="4"/>
+                        <rect key="frame" x="12" y="243" width="150" height="4"/>
                         <color key="progressTintColor" systemColor="systemGreenColor"/>
                     </progressView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhA-KQ-VWk">
-                        <rect key="frame" x="12" y="217" width="28.5" height="16"/>
+                        <rect key="frame" x="12" y="221" width="28.5" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -36,20 +36,28 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jw-rM-fNm">
+                        <rect key="frame" x="131" y="222" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="wzx-Nv-8fX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4Bv-wD-KEy"/>
+                <constraint firstItem="4Jw-rM-fNm" firstAttribute="trailing" secondItem="hw7-hV-oxu" secondAttribute="trailing" id="8Ic-Th-kSE"/>
                 <constraint firstItem="hw7-hV-oxu" firstAttribute="top" secondItem="EhA-KQ-VWk" secondAttribute="bottom" constant="6" id="DPx-20-cOf"/>
                 <constraint firstItem="dqG-rV-thr" firstAttribute="top" secondItem="wzx-Nv-8fX" secondAttribute="bottom" constant="6" id="EDQ-Lm-mWg"/>
                 <constraint firstAttribute="trailing" secondItem="dqG-rV-thr" secondAttribute="trailing" constant="8" id="ITY-GW-TEh"/>
+                <constraint firstItem="4Jw-rM-fNm" firstAttribute="centerY" secondItem="EhA-KQ-VWk" secondAttribute="centerY" id="QIk-rU-31L"/>
                 <constraint firstItem="wzx-Nv-8fX" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.6" constant="23" id="XBM-oj-bv0"/>
                 <constraint firstItem="EhA-KQ-VWk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="aMw-E3-XBG"/>
                 <constraint firstItem="hw7-hV-oxu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="fd6-2r-16A"/>
                 <constraint firstItem="wzx-Nv-8fX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jVe-U3-RSp"/>
-                <constraint firstAttribute="bottom" secondItem="hw7-hV-oxu" secondAttribute="bottom" constant="20" id="oWv-GE-tdN"/>
+                <constraint firstAttribute="bottom" secondItem="hw7-hV-oxu" secondAttribute="bottom" constant="16" id="oWv-GE-tdN"/>
                 <constraint firstAttribute="trailing" secondItem="wzx-Nv-8fX" secondAttribute="trailing" id="shU-oA-QHF"/>
                 <constraint firstItem="dqG-rV-thr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="wPI-GQ-Z5u"/>
                 <constraint firstItem="hw7-hV-oxu" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.439883" id="yYb-hP-iU6"/>
@@ -60,6 +68,7 @@
                 <outlet property="campaignImageView" destination="wzx-Nv-8fX" id="uZS-uj-IQC"/>
                 <outlet property="progressView" destination="hw7-hV-oxu" id="M4C-Dq-7ie"/>
                 <outlet property="titleLabel" destination="dqG-rV-thr" id="jkV-8h-aGy"/>
+                <outlet property="totalAmountLabel" destination="4Jw-rM-fNm" id="s8h-jk-yNJ"/>
             </connections>
             <point key="canvasLocation" x="-18.115942028985508" y="65.959821428571431"/>
         </collectionViewCell>

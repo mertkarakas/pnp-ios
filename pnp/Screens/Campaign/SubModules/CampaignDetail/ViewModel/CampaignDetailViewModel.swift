@@ -9,9 +9,9 @@ final class CampaignDetailViewModel {
 
     weak var coordinatorDelegate: CampaignDetailCoordinatorDelegate?
 
-    let item: CampaignModel
+    let item: Campaign
 
-    init(item: CampaignModel) {
+    init(item: Campaign) {
         self.item = item
     }
 
