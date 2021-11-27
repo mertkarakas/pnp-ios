@@ -17,4 +17,8 @@ struct CampaignModel {
     func calculatedProgress() -> Float {
         NSDecimalNumber(decimal: reachedAmount).floatValue / NSDecimalNumber(decimal: maxAmount).floatValue 
     }
+
+    func percentage() -> Int {
+        Int(calculatedProgress() * 100)
+    }
 }

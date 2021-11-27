@@ -25,11 +25,6 @@ final class CampaignCollectionViewCell: UICollectionViewCell {
         titleLabel.text = item.title
         progressView.setProgress(item.calculatedProgress(), animated: true)
         campaignImageView.image = UIImage(named: item.image)
-
-        guard let reachedAmount = item.reachedAmount.convertToString(),
-              let maxAmount = item.maxAmount.convertToString() else {
-            return
-        }
-        amountLabel.text = "\(reachedAmount) \\ \(maxAmount)"
+        amountLabel.text = "% \(item.percentage())"
     }
 }

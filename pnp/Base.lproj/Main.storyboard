@@ -71,7 +71,7 @@
                                 <rect key="frame" x="145.5" y="382.5" width="123" height="28"/>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRE-lr-Ll4" customClass="PrimaryButton" customModule="pnp" customModuleProvider="target">
-                                <rect key="frame" x="127" y="472.5" width="160" height="36"/>
+                                <rect key="frame" x="16" y="472.5" width="382" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" red="0.9663217664" green="0.4355890751" blue="0.4470448494" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title=" Kampanyaları Gör">
@@ -88,7 +88,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ME7-4k-RHA" customClass="PrimaryButton" customModule="pnp" customModuleProvider="target">
-                                <rect key="frame" x="127" y="523.5" width="160" height="36"/>
+                                <rect key="frame" x="16" y="523.5" width="382" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" red="0.9663217664" green="0.4355890751" blue="0.4470448494" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Giriş Yap">
@@ -99,7 +99,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQr-7l-EIX" customClass="PrimaryButton" customModule="pnp" customModuleProvider="target">
-                                <rect key="frame" x="127.5" y="574.5" width="159.5" height="36"/>
+                                <rect key="frame" x="16.5" y="574.5" width="381.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="tintColor" red="0.9663217664" green="0.4355890751" blue="0.4470448494" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Kayıt Ol">
@@ -116,12 +116,14 @@
                             <constraint firstItem="CQr-7l-EIX" firstAttribute="top" secondItem="ME7-4k-RHA" secondAttribute="bottom" constant="15" id="2Ew-DZ-bnV"/>
                             <constraint firstItem="eao-Zz-AD7" firstAttribute="top" secondItem="1FH-0h-0rk" secondAttribute="top" constant="30" id="2YO-ys-IxF"/>
                             <constraint firstItem="eao-Zz-AD7" firstAttribute="height" secondItem="RbJ-QU-ITJ" secondAttribute="height" multiplier="0.4" id="4X0-ut-ATJ"/>
-                            <constraint firstItem="ME7-4k-RHA" firstAttribute="leading" secondItem="pRE-lr-Ll4" secondAttribute="leading" id="9B6-Te-jkX"/>
-                            <constraint firstItem="ME7-4k-RHA" firstAttribute="trailing" secondItem="pRE-lr-Ll4" secondAttribute="trailing" id="Lrd-KN-xTX"/>
+                            <constraint firstItem="1FH-0h-0rk" firstAttribute="trailing" secondItem="pRE-lr-Ll4" secondAttribute="trailing" constant="16" id="JnQ-s9-ABh"/>
                             <constraint firstItem="pRE-lr-Ll4" firstAttribute="centerX" secondItem="RbJ-QU-ITJ" secondAttribute="centerX" id="NEp-04-bcv"/>
+                            <constraint firstItem="ME7-4k-RHA" firstAttribute="leading" secondItem="pRE-lr-Ll4" secondAttribute="leading" id="NS6-lZ-5Aa"/>
                             <constraint firstItem="fW4-0u-fam" firstAttribute="centerX" secondItem="RbJ-QU-ITJ" secondAttribute="centerX" id="R2K-LI-LLb"/>
                             <constraint firstItem="1FH-0h-0rk" firstAttribute="bottom" secondItem="AuD-il-xRH" secondAttribute="bottom" id="TDC-T3-h4c"/>
                             <constraint firstItem="AuD-il-xRH" firstAttribute="leading" secondItem="1FH-0h-0rk" secondAttribute="leading" id="Y2u-DG-0O4"/>
+                            <constraint firstItem="pRE-lr-Ll4" firstAttribute="leading" secondItem="1FH-0h-0rk" secondAttribute="leading" constant="16" id="Ym6-l0-afb"/>
+                            <constraint firstItem="ME7-4k-RHA" firstAttribute="trailing" secondItem="pRE-lr-Ll4" secondAttribute="trailing" id="Zaa-kv-K2k"/>
                             <constraint firstItem="pRE-lr-Ll4" firstAttribute="top" secondItem="eao-Zz-AD7" secondAttribute="bottom" constant="40" id="f2W-6N-nV3"/>
                             <constraint firstItem="fW4-0u-fam" firstAttribute="top" secondItem="eao-Zz-AD7" secondAttribute="bottom" constant="-50" id="jgc-bj-gmh"/>
                             <constraint firstItem="1FH-0h-0rk" firstAttribute="trailing" secondItem="AuD-il-xRH" secondAttribute="trailing" id="jwb-Ot-Nla"/>
@@ -286,6 +288,9 @@
                                         <state key="normal">
                                             <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="shareAction:" destination="wnd-0K-e6p" eventType="touchUpInside" id="0Ei-YM-MoA"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h3D-Lz-Nil">
                                         <rect key="frame" x="20" y="53" width="378" height="200"/>
@@ -309,6 +314,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mkf-QA-0fB" customClass="PrimaryButton" customModule="pnp" customModuleProvider="target">
                                         <rect key="frame" x="20" y="461" width="378" height="30"/>
                                         <state key="normal" title="İyilik Yap"/>
+                                        <connections>
+                                            <action selector="donateButtonAction:" destination="wnd-0K-e6p" eventType="touchUpInside" id="J2d-0Z-nDq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -350,6 +358,102 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nur-Fy-haS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="877" y="747"/>
+        </scene>
+        <!--Donate View Controller-->
+        <scene sceneID="A0t-Qc-rDB">
+            <objects>
+                <viewController storyboardIdentifier="DonateViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YOm-xV-nbh" customClass="DonateViewController" customModule="pnp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bcU-iC-oXI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaC-AC-8mp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CAb-nW-03n">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="231"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPY-Qt-dU4">
+                                                <rect key="frame" x="16" y="16" width="382" height="20"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="BOi-1S-gcZ"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bakiye" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5N-7c-Ggt">
+                                                <rect key="frame" x="16" y="46" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZB-fw-jOA">
+                                                <rect key="frame" x="16" y="76.5" width="382" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miktar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alt-bF-jPQ">
+                                                <rect key="frame" x="16" y="110.5" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0 IzToken" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vig-d4-wCE">
+                                                <rect key="frame" x="16" y="141" width="382" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3UE-b4-OOE">
+                                                <rect key="frame" x="16" y="185" width="382" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4L-nb-Fj3" customClass="PrimaryButton" customModule="pnp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="181" height="30"/>
+                                                        <state key="normal" title="Öde"/>
+                                                        <connections>
+                                                            <action selector="paymentAction:" destination="YOm-xV-nbh" eventType="touchUpInside" id="6m9-jB-m0V"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Un7-L7-cyl" customClass="PrimaryButton" customModule="pnp" customModuleProvider="target">
+                                                        <rect key="frame" x="201" y="0.0" width="181" height="30"/>
+                                                        <state key="normal" title="Bakiye Yükle"/>
+                                                        <connections>
+                                                            <action selector="getMoreTokenAction:" destination="YOm-xV-nbh" eventType="touchUpInside" id="sBY-Oe-MTg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CAb-nW-03n" firstAttribute="width" secondItem="qaC-AC-8mp" secondAttribute="width" id="6K0-UG-JyR"/>
+                                    <constraint firstAttribute="bottom" secondItem="CAb-nW-03n" secondAttribute="bottom" id="Dyu-Bt-SJJ"/>
+                                    <constraint firstItem="CAb-nW-03n" firstAttribute="leading" secondItem="qaC-AC-8mp" secondAttribute="leading" id="PJI-wA-Q83"/>
+                                    <constraint firstItem="CAb-nW-03n" firstAttribute="top" secondItem="qaC-AC-8mp" secondAttribute="top" id="euX-SX-25L"/>
+                                    <constraint firstAttribute="trailing" secondItem="CAb-nW-03n" secondAttribute="trailing" id="hPg-pD-ZAa"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7HR-xC-sZr"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qaC-AC-8mp" firstAttribute="top" secondItem="7HR-xC-sZr" secondAttribute="top" id="3FC-qd-26R"/>
+                            <constraint firstItem="7HR-xC-sZr" firstAttribute="bottom" secondItem="qaC-AC-8mp" secondAttribute="bottom" id="71g-xL-oNh"/>
+                            <constraint firstItem="qaC-AC-8mp" firstAttribute="leading" secondItem="7HR-xC-sZr" secondAttribute="leading" id="FTz-4L-RDr"/>
+                            <constraint firstItem="7HR-xC-sZr" firstAttribute="trailing" secondItem="qaC-AC-8mp" secondAttribute="trailing" id="KpS-Vn-brx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amountTextfield" destination="vig-d4-wCE" id="7E3-oC-5R8"/>
+                        <outlet property="balanceLabel" destination="6ZB-fw-jOA" id="pL0-c6-Pr1"/>
+                        <outlet property="getMoreTokenButton" destination="Un7-L7-cyl" id="HK6-vE-n6o"/>
+                        <outlet property="paymentActionButton" destination="l4L-nb-Fj3" id="Zod-bD-oFb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wwe-l9-LOY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1595" y="761"/>
         </scene>
         <!--Anasayfa-->
         <scene sceneID="gap-rk-63k">

@@ -70,6 +70,10 @@
 		254AF4C7275209E0004D47D4 /* GetIzTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AF4C6275209E0004D47D4 /* GetIzTokenViewController.swift */; };
 		254AF4CD27521129004D47D4 /* GetIzTokenResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AF4CC27521128004D47D4 /* GetIzTokenResultViewController.swift */; };
 		254AF4D227521318004D47D4 /* GetIzTokenResultCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AF4D127521318004D47D4 /* GetIzTokenResultCoordinator.swift */; };
+		254AF4D7275234F8004D47D4 /* CampaignDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AF4D6275234F8004D47D4 /* CampaignDetailCoordinator.swift */; };
+		254AF4E027523685004D47D4 /* DonateCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AF4DF27523685004D47D4 /* DonateCoordinator.swift */; };
+		254AF4E427523691004D47D4 /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AF4E327523691004D47D4 /* DonateViewController.swift */; };
+		254AF4E72752369E004D47D4 /* DonateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254AF4E62752369E004D47D4 /* DonateViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +167,10 @@
 		254AF4C6275209E0004D47D4 /* GetIzTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetIzTokenViewController.swift; sourceTree = "<group>"; };
 		254AF4CC27521128004D47D4 /* GetIzTokenResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetIzTokenResultViewController.swift; sourceTree = "<group>"; };
 		254AF4D127521318004D47D4 /* GetIzTokenResultCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetIzTokenResultCoordinator.swift; sourceTree = "<group>"; };
+		254AF4D6275234F8004D47D4 /* CampaignDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampaignDetailCoordinator.swift; sourceTree = "<group>"; };
+		254AF4DF27523685004D47D4 /* DonateCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateCoordinator.swift; sourceTree = "<group>"; };
+		254AF4E327523691004D47D4 /* DonateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
+		254AF4E62752369E004D47D4 /* DonateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +359,7 @@
 		250D883C2751835D00C859BC /* CampaignDetail */ = {
 			isa = PBXGroup;
 			children = (
+				254AF4D5275234D0004D47D4 /* Coordinator */,
 				250D883D2751835D00C859BC /* ViewModel */,
 				250D883F2751835D00C859BC /* View */,
 			);
@@ -402,6 +411,7 @@
 		250D88512751836800C859BC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				254AF4DB27523666004D47D4 /* Donate */,
 				254AF4BB275209A1004D47D4 /* GetIzToken */,
 				250D88362751835D00C859BC /* Campaign */,
 				250D887B27519E9C00C859BC /* Dashboard */,
@@ -792,6 +802,48 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		254AF4D5275234D0004D47D4 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				254AF4D6275234F8004D47D4 /* CampaignDetailCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		254AF4DB27523666004D47D4 /* Donate */ = {
+			isa = PBXGroup;
+			children = (
+				254AF4DE27523676004D47D4 /* ViewModel */,
+				254AF4DD27523672004D47D4 /* View */,
+				254AF4DC2752366B004D47D4 /* Coordinator */,
+			);
+			path = Donate;
+			sourceTree = "<group>";
+		};
+		254AF4DC2752366B004D47D4 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				254AF4DF27523685004D47D4 /* DonateCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		254AF4DD27523672004D47D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				254AF4E327523691004D47D4 /* DonateViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		254AF4DE27523676004D47D4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				254AF4E62752369E004D47D4 /* DonateViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -903,14 +955,18 @@
 				250D88482751835D00C859BC /* CampaignViewModel.swift in Sources */,
 				250D886C2751914E00C859BC /* GeneralConstants.swift in Sources */,
 				250D882E27517BD400C859BC /* SliderItemCollectionViewCell.swift in Sources */,
+				254AF4E427523691004D47D4 /* DonateViewController.swift in Sources */,
 				254AF4B42751FD61004D47D4 /* ProfileCoordinator.swift in Sources */,
 				250D882A27517B4700C859BC /* UINavigationItem+Extensions.swift in Sources */,
 				254AF4C4275209D1004D47D4 /* GetIzTokenViewModel.swift in Sources */,
 				250D882727517B2300C859BC /* UIBarButtonItem+Extensions.swift in Sources */,
+				254AF4D7275234F8004D47D4 /* CampaignDetailCoordinator.swift in Sources */,
 				254AF4C7275209E0004D47D4 /* GetIzTokenViewController.swift in Sources */,
 				250D89172751ED7800C859BC /* PnpApp.xcdatamodeld in Sources */,
 				250D886827518FBD00C859BC /* LoginCoordinator.swift in Sources */,
 				250D884E2751835D00C859BC /* CampaignCollectionViewCell.swift in Sources */,
+				254AF4E027523685004D47D4 /* DonateCoordinator.swift in Sources */,
+				254AF4E72752369E004D47D4 /* DonateViewModel.swift in Sources */,
 				250D884C2751835D00C859BC /* CampaignModel.swift in Sources */,
 				254AF4B12751FD35004D47D4 /* ProfileViewModel.swift in Sources */,
 				250D88492751835D00C859BC /* CampaignCoordinator.swift in Sources */,

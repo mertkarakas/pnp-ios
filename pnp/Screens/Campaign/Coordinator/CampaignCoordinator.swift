@@ -34,11 +34,9 @@ final class CampaignCoordinator: CoordinatorProtocol {
 
 extension CampaignCoordinator: CampaignCoordinatorDelegate {
     func goToDetail(with item: CampaignModel) {
-        let campaignDetailViewModel = CampaignDetailViewModel(item: item)
-        let campaignDetailViewController: CampaignDetailViewController = .instantiate()
-        campaignDetailViewController.viewModel = campaignDetailViewModel
-
-        navigationController.present(campaignDetailViewController, animated: true, completion: nil)
+        let campaignDetailCoordinator = CampaignDetailCoordinator(navController: navigationController, dependency: dependency, campaignModel: item, user: nil)
+        childCoordinators.append(campaignDetailCoordinator)
+        campaignDetailCoordinator.start()
     }
 
     func goToSignIn() {

@@ -29,4 +29,10 @@ final class CampaignDetailViewController: UIViewController {
 
     @IBAction func shareAction(_ sender: Any) {
     }
+
+    @IBAction func donateButtonAction(_ sender: Any) {
+        dismiss(animated: true) { [weak self] in
+            self?.viewModel.donateButton()
+        }
+    }
 }

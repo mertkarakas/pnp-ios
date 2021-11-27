@@ -7,9 +7,15 @@
 
 final class CampaignDetailViewModel {
 
+    weak var coordinatorDelegate: CampaignDetailCoordinatorDelegate?
+
     let item: CampaignModel
 
     init(item: CampaignModel) {
         self.item = item
+    }
+
+    func donateButton() {
+        coordinatorDelegate?.goToDonate(model: item)
     }
 }

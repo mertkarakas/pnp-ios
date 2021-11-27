@@ -21,11 +21,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="341" height="181"/>
                     </imageView>
                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hw7-hV-oxu">
-                        <rect key="frame" x="12" y="247" width="150" height="4"/>
+                        <rect key="frame" x="12" y="239" width="150" height="4"/>
                         <color key="progressTintColor" systemColor="systemGreenColor"/>
                     </progressView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 TL / 1,000 TL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhA-KQ-VWk">
-                        <rect key="frame" x="12" y="225" width="105" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhA-KQ-VWk">
+                        <rect key="frame" x="12" y="217" width="28.5" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -49,7 +49,7 @@
                 <constraint firstItem="EhA-KQ-VWk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="aMw-E3-XBG"/>
                 <constraint firstItem="hw7-hV-oxu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="fd6-2r-16A"/>
                 <constraint firstItem="wzx-Nv-8fX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jVe-U3-RSp"/>
-                <constraint firstAttribute="bottom" secondItem="hw7-hV-oxu" secondAttribute="bottom" constant="12" id="oWv-GE-tdN"/>
+                <constraint firstAttribute="bottom" secondItem="hw7-hV-oxu" secondAttribute="bottom" constant="20" id="oWv-GE-tdN"/>
                 <constraint firstAttribute="trailing" secondItem="wzx-Nv-8fX" secondAttribute="trailing" id="shU-oA-QHF"/>
                 <constraint firstItem="dqG-rV-thr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="wPI-GQ-Z5u"/>
                 <constraint firstItem="hw7-hV-oxu" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.439883" id="yYb-hP-iU6"/>
