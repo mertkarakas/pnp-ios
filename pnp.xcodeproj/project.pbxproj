@@ -37,6 +37,12 @@
 		250D886C2751914E00C859BC /* GeneralConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D886B2751914E00C859BC /* GeneralConstants.swift */; };
 		250D8870275192C100C859BC /* TitleSubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D886F275192C100C859BC /* TitleSubtitleCell.swift */; };
 		250D8875275193A500C859BC /* TitleSubtitleCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D8874275193A500C859BC /* TitleSubtitleCellModel.swift */; };
+		250D888027519ECB00C859BC /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D887F27519ECB00C859BC /* DashboardCoordinator.swift */; };
+		250D888427519ED400C859BC /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D888327519ED400C859BC /* DashboardViewController.swift */; };
+		250D888727519EDD00C859BC /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D888627519EDD00C859BC /* DashboardViewModel.swift */; };
+		250D888B2751A13800C859BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D888A2751A13800C859BC /* ProfileViewController.swift */; };
+		250D88932751B74A00C859BC /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88922751B74A00C859BC /* UIColor+Extensions.swift */; };
+		250D88962751B84800C859BC /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88952751B84800C859BC /* UIButton+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +78,12 @@
 		250D886B2751914E00C859BC /* GeneralConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralConstants.swift; sourceTree = "<group>"; };
 		250D886F275192C100C859BC /* TitleSubtitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCell.swift; sourceTree = "<group>"; };
 		250D8874275193A500C859BC /* TitleSubtitleCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSubtitleCellModel.swift; sourceTree = "<group>"; };
+		250D887F27519ECB00C859BC /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
+		250D888327519ED400C859BC /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		250D888627519EDD00C859BC /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		250D888A2751A13800C859BC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		250D88922751B74A00C859BC /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		250D88952751B84800C859BC /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +154,8 @@
 				250D882627517B2300C859BC /* UIBarButtonItem+Extensions.swift */,
 				250D882927517B4700C859BC /* UINavigationItem+Extensions.swift */,
 				250D88532751840600C859BC /* Decimal+Extensions.swift */,
+				250D88922751B74A00C859BC /* UIColor+Extensions.swift */,
+				250D88952751B84800C859BC /* UIButton+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -297,6 +311,8 @@
 		250D88512751836800C859BC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				250D88892751A12D00C859BC /* Profile */,
+				250D887B27519E9C00C859BC /* Dashboard */,
 				250D885B27518F5C00C859BC /* Login */,
 				250D88362751835D00C859BC /* Campaign */,
 				250D8816275179C200C859BC /* PreLogin */,
@@ -369,6 +385,48 @@
 				250D8874275193A500C859BC /* TitleSubtitleCellModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		250D887B27519E9C00C859BC /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				250D887C27519EA500C859BC /* Coordinator */,
+				250D887D27519EAA00C859BC /* View */,
+				250D887E27519EAD00C859BC /* ViewModel */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		250D887C27519EA500C859BC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				250D887F27519ECB00C859BC /* DashboardCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		250D887D27519EAA00C859BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				250D888327519ED400C859BC /* DashboardViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		250D887E27519EAD00C859BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				250D888627519EDD00C859BC /* DashboardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		250D88892751A12D00C859BC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				250D888A2751A13800C859BC /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,6 +502,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				250D8870275192C100C859BC /* TitleSubtitleCell.swift in Sources */,
+				250D88932751B74A00C859BC /* UIColor+Extensions.swift in Sources */,
+				250D888427519ED400C859BC /* DashboardViewController.swift in Sources */,
 				250D88482751835D00C859BC /* CampaignViewModel.swift in Sources */,
 				250D886C2751914E00C859BC /* GeneralConstants.swift in Sources */,
 				250D882E27517BD400C859BC /* SliderItemCollectionViewCell.swift in Sources */,
@@ -455,7 +515,9 @@
 				250D88492751835D00C859BC /* CampaignCoordinator.swift in Sources */,
 				250D884F2751835D00C859BC /* CampaignViewController.swift in Sources */,
 				250D886127518F8E00C859BC /* LoginViewController.swift in Sources */,
+				250D888B2751A13800C859BC /* ProfileViewController.swift in Sources */,
 				250D88592751871800C859BC /* ListFlowLayout.swift in Sources */,
+				250D888027519ECB00C859BC /* DashboardCoordinator.swift in Sources */,
 				250D884B2751835D00C859BC /* CampaignDetailViewController.swift in Sources */,
 				250D88542751840600C859BC /* Decimal+Extensions.swift in Sources */,
 				250D88112751786400C859BC /* AppCoordinator.swift in Sources */,
@@ -468,6 +530,8 @@
 				250D881F27517A3900C859BC /* PreLoginViewModel.swift in Sources */,
 				250D881C27517A2D00C859BC /* PreLoginViewController.swift in Sources */,
 				250D886527518FAA00C859BC /* LoginViewModel.swift in Sources */,
+				250D888727519EDD00C859BC /* DashboardViewModel.swift in Sources */,
+				250D88962751B84800C859BC /* UIButton+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

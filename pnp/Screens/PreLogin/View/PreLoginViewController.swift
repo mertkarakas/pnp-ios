@@ -42,22 +42,25 @@ final class PreLoginViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setTimer()
+        //setTimer()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        timer.invalidate()
+        //timer.invalidate()
     }
 
     // MARK: - UI
 
     private func prepareUI() {
 
-        showCampaignsButton.layer.cornerRadius = 4
-        showCampaignsButton.layer.borderColor = UIColor.white.cgColor
-        showCampaignsButton.layer.borderWidth = 2
-        showCampaignsButton.contentEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+        //applyBackgroundImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.tintColor = UIColor(red: 0.96, green: 0.44, blue: 0.45, alpha: 1.00)
+
+        showCampaignsButton.makePrimaryButton()
 
         navigationItem.rightBarButtonItem = UIBarButtonItem.makeSignInButton(selector: #selector(rightBarButtonAction), target: self)
     }

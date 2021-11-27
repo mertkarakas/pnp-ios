@@ -24,4 +24,8 @@ final class LoginViewModel {
         }
         return true
     }
+
+    func loginButtonAction() {
+        loginCoordinator?.goToDashboard()
+    }
 }

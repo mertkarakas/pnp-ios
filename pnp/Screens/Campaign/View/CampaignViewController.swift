@@ -32,6 +32,7 @@ final class CampaignViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = .background
         campaignCollectionView.register(UINib(nibName: Constants.campaignCollectionViewNibName, bundle: .main), forCellWithReuseIdentifier: Constants.campaignCollectionViewReuseIdentifier)
         campaignCollectionView.setCollectionViewLayout(ListFlowLayout(), animated: false)
         campaignCollectionView.delegate = self

@@ -18,17 +18,17 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         loginButton.isEnabled = false
+        view.backgroundColor = .background
+        loginButton.makePrimaryButton()
         passwordTextField.isSecureTextEntry = true
         usernameTextField.delegate = self
         usernameTextField.autocorrectionType = .no
         passwordTextField.delegate = self
         passwordTextField.autocorrectionType = .no
-
-        title = GeneralConstants.login
     }
 
     @IBAction func loginButtonAction(_ sender: Any) {
-
+        viewModel.loginButtonAction()
     }
 }
 

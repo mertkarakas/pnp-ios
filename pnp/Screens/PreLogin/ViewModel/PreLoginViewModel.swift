@@ -17,7 +17,7 @@ final class PreLoginViewModel: PreLoginViewModelProtocol {
     weak var coordinatorDelegate: PreLoginCoordinatorDelegate?
 
     #warning("will retrieve from the service")
-    let banners = ["mobile-hackathon", "mobile-hackathon", "mobile-hackathon", "mobile-hackathon"]
+    let banners = ["banner1", "banner1", "mobile-hackathon", "mobile-hackathon"]
 
     func showCampaignAction() {
         coordinatorDelegate?.goToCampaigns()

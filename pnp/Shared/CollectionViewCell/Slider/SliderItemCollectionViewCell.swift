@@ -12,6 +12,9 @@ final class SliderItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var sliderImageView: UIImageView!
 
     func configure(imageString: String) {
+        sliderImageView.layer.cornerRadius = 4
+        sliderImageView.layer.borderWidth = 1
+        sliderImageView.layer.borderColor = UIColor.lightGray.cgColor
         sliderImageView.contentMode = .scaleAspectFill
         sliderImageView.image = UIImage(named: imageString)
     }
