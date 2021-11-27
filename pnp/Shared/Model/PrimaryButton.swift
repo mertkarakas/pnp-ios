@@ -1,5 +1,5 @@
 //
-//  UIButton+Extensions.swift
+//  PrimaryButton.swift
 //  pnp
 //
 //  Created by Mert Karakas [Mirsisbilgiteknolojileri] on 27.11.2021.
@@ -7,8 +7,15 @@
 
 import UIKit
 
-extension UIButton {
-    func makePrimaryButton() {
+final class PrimaryButton: UIButton {
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+
+        configure()
+    }
+
+    private func configure() {
         layer.cornerRadius = 4
         backgroundColor = .primary
         tintColor = .white

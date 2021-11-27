@@ -42,7 +42,10 @@
 		250D888727519EDD00C859BC /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D888627519EDD00C859BC /* DashboardViewModel.swift */; };
 		250D888B2751A13800C859BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D888A2751A13800C859BC /* ProfileViewController.swift */; };
 		250D88932751B74A00C859BC /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88922751B74A00C859BC /* UIColor+Extensions.swift */; };
-		250D88962751B84800C859BC /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88952751B84800C859BC /* UIButton+Extensions.swift */; };
+		250D889D2751BEA800C859BC /* NewCampaignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D889C2751BEA800C859BC /* NewCampaignViewController.swift */; };
+		250D88A12751BED000C859BC /* NewCampaignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88A02751BED000C859BC /* NewCampaignViewModel.swift */; };
+		250D88A42751BEED00C859BC /* NewCampaignCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88A32751BEED00C859BC /* NewCampaignCoordinator.swift */; };
+		250D88A82751C52800C859BC /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88A72751C52800C859BC /* PrimaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,7 +86,10 @@
 		250D888627519EDD00C859BC /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
 		250D888A2751A13800C859BC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		250D88922751B74A00C859BC /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		250D88952751B84800C859BC /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		250D889C2751BEA800C859BC /* NewCampaignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCampaignViewController.swift; sourceTree = "<group>"; };
+		250D88A02751BED000C859BC /* NewCampaignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCampaignViewModel.swift; sourceTree = "<group>"; };
+		250D88A32751BEED00C859BC /* NewCampaignCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCampaignCoordinator.swift; sourceTree = "<group>"; };
+		250D88A72751C52800C859BC /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +161,6 @@
 				250D882927517B4700C859BC /* UINavigationItem+Extensions.swift */,
 				250D88532751840600C859BC /* Decimal+Extensions.swift */,
 				250D88922751B74A00C859BC /* UIColor+Extensions.swift */,
-				250D88952751B84800C859BC /* UIButton+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 		250D882427517B0600C859BC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				250D88A62751C51D00C859BC /* Model */,
 				250D886E2751929D00C859BC /* TableViewCell */,
 				250D883227517FDA00C859BC /* CollectionViewCell */,
 				250D8857275186D900C859BC /* FlowLayout */,
@@ -311,6 +317,7 @@
 		250D88512751836800C859BC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				250D88982751BE7C00C859BC /* NewCampaign */,
 				250D88892751A12D00C859BC /* Profile */,
 				250D887B27519E9C00C859BC /* Dashboard */,
 				250D885B27518F5C00C859BC /* Login */,
@@ -429,6 +436,48 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		250D88982751BE7C00C859BC /* NewCampaign */ = {
+			isa = PBXGroup;
+			children = (
+				250D889B2751BE9A00C859BC /* View */,
+				250D889A2751BE9400C859BC /* ViewModel */,
+				250D88992751BE8900C859BC /* Coordinator */,
+			);
+			path = NewCampaign;
+			sourceTree = "<group>";
+		};
+		250D88992751BE8900C859BC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				250D88A32751BEED00C859BC /* NewCampaignCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		250D889A2751BE9400C859BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				250D88A02751BED000C859BC /* NewCampaignViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		250D889B2751BE9A00C859BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				250D889C2751BEA800C859BC /* NewCampaignViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		250D88A62751C51D00C859BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				250D88A72751C52800C859BC /* PrimaryButton.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -504,6 +553,7 @@
 				250D8870275192C100C859BC /* TitleSubtitleCell.swift in Sources */,
 				250D88932751B74A00C859BC /* UIColor+Extensions.swift in Sources */,
 				250D888427519ED400C859BC /* DashboardViewController.swift in Sources */,
+				250D889D2751BEA800C859BC /* NewCampaignViewController.swift in Sources */,
 				250D88482751835D00C859BC /* CampaignViewModel.swift in Sources */,
 				250D886C2751914E00C859BC /* GeneralConstants.swift in Sources */,
 				250D882E27517BD400C859BC /* SliderItemCollectionViewCell.swift in Sources */,
@@ -521,6 +571,7 @@
 				250D884B2751835D00C859BC /* CampaignDetailViewController.swift in Sources */,
 				250D88542751840600C859BC /* Decimal+Extensions.swift in Sources */,
 				250D88112751786400C859BC /* AppCoordinator.swift in Sources */,
+				250D88A42751BEED00C859BC /* NewCampaignCoordinator.swift in Sources */,
 				250D882227517A4200C859BC /* PreLoginCoordinator.swift in Sources */,
 				250D88142751788A00C859BC /* DependencyContainer.swift in Sources */,
 				250D880B2751767B00C859BC /* UIViewController+Extensions.swift in Sources */,
@@ -530,8 +581,9 @@
 				250D881F27517A3900C859BC /* PreLoginViewModel.swift in Sources */,
 				250D881C27517A2D00C859BC /* PreLoginViewController.swift in Sources */,
 				250D886527518FAA00C859BC /* LoginViewModel.swift in Sources */,
+				250D88A12751BED000C859BC /* NewCampaignViewModel.swift in Sources */,
+				250D88A82751C52800C859BC /* PrimaryButton.swift in Sources */,
 				250D888727519EDD00C859BC /* DashboardViewModel.swift in Sources */,
-				250D88962751B84800C859BC /* UIButton+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

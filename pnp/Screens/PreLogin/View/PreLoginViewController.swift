@@ -60,8 +60,6 @@ final class PreLoginViewController: UIViewController {
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.tintColor = UIColor(red: 0.96, green: 0.44, blue: 0.45, alpha: 1.00)
 
-        showCampaignsButton.makePrimaryButton()
-
         navigationItem.rightBarButtonItem = UIBarButtonItem.makeSignInButton(selector: #selector(rightBarButtonAction), target: self)
     }
 

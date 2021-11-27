@@ -19,7 +19,6 @@ final class LoginViewController: UIViewController {
 
         loginButton.isEnabled = false
         view.backgroundColor = .background
-        loginButton.makePrimaryButton()
         passwordTextField.isSecureTextEntry = true
         usernameTextField.delegate = self
         usernameTextField.autocorrectionType = .no

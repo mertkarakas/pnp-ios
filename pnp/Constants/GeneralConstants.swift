@@ -7,4 +7,5 @@
 
 enum GeneralConstants {
     static let login = "Giriş Yap"
+    static let campaigns = "Tüm Kampanyalar"
 }

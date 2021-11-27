@@ -8,4 +8,8 @@
 final class DashboardViewModel {
 
     weak var coordinatorDelegate: DashboardCoordinatorDelegate?
+
+    func goToNewCampaign() {
+        coordinatorDelegate?.goToNewCampaign()
+    }
 }
