@@ -9,6 +9,12 @@ import UIKit
 
 final class PrimaryButton: UIButton {
 
+    override var isEnabled: Bool {
+        didSet {
+            isActive(isEnabled)
+        }
+    }
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
 
@@ -20,7 +26,10 @@ final class PrimaryButton: UIButton {
         backgroundColor = .primary
         tintColor = .white
         setTitleColor(.white, for: .normal)
-        setTitleColor(.background, for: .disabled)
         contentEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+    }
+
+    private func isActive(_ isActive: Bool) {
+        backgroundColor = isActive ? .primary : .gray
     }
 }
