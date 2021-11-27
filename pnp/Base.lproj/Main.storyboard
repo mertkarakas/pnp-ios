@@ -794,7 +794,7 @@
             </objects>
             <point key="canvasLocation" x="3585.507246376812" y="60.9375"/>
         </scene>
-        <!--Profile-->
+        <!--Profil-->
         <scene sceneID="crR-Mq-DbD">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="74i-NX-M65" customClass="ProfileViewController" customModule="pnp" customModuleProvider="target" sceneMemberID="viewController">
@@ -934,7 +934,7 @@
                             <constraint firstItem="5Dy-lc-Wrx" firstAttribute="top" secondItem="1Zy-NX-uVl" secondAttribute="top" constant="10" id="wEO-kw-G3K"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="OJS-ow-tTA"/>
+                    <tabBarItem key="tabBarItem" title="Profil" image="person.fill" catalog="system" id="OJS-ow-tTA"/>
                     <connections>
                         <outlet property="izTokenCountLabel" destination="APh-7o-jt9" id="zPH-ld-HZ6"/>
                         <outlet property="usernameLabel" destination="OQa-UL-pwK" id="2DO-aF-R91"/>
