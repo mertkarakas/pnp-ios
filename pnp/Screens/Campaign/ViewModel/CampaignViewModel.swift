@@ -12,7 +12,7 @@ protocol CampaignViewModelOutput: AnyObject {
 }
 
 protocol CampaignViewModelProtocol {
-    var models: [Campaign] { get }
+    var reOrderedModels: [Campaign] { get }
 
     func didSelectItem(at index: Int)
     func goToSignIn()
@@ -28,7 +28,11 @@ final class CampaignViewModel: CampaignViewModelProtocol {
     private let coreDataManager: CoreDataManager
 
     #warning("Models will retrieve from the service.")
-    var models: [Campaign]
+    private var models: [Campaign]
+
+    var reOrderedModels: [Campaign] {
+        return models.reversed()
+    }
 
     // MARK: - Init
 
@@ -91,7 +95,7 @@ final class CampaignViewModel: CampaignViewModelProtocol {
     }
 
     func didSelectItem(at index: Int) {
-        coordinatorDelegate?.goToDetail(with: models[index])
+        coordinatorDelegate?.goToDetail(with: reOrderedModels[index])
     }
 
     func goToSignIn() {
@@ -99,8 +103,3 @@ final class CampaignViewModel: CampaignViewModelProtocol {
     }
 }
 
-extension CampaignViewModel {
-    private func makeMock() {
-
-    }
-}

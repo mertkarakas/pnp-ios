@@ -40,8 +40,8 @@ final class CampaignViewController: UIViewController {
         campaignCollectionView.dataSource = self
     }
 
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
 
         viewModel.refreshItems()
     }
@@ -61,12 +61,12 @@ extension CampaignViewController: UICollectionViewDataSource, UICollectionViewDe
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.models.count
+        viewModel.reOrderedModels.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.campaignCollectionViewReuseIdentifier, for: indexPath) as? CampaignCollectionViewCell {
-            let item = viewModel.models[indexPath.row]
+            let item = viewModel.reOrderedModels[indexPath.row]
             cell.configureCell(item: item)
             return cell
         }
@@ -74,7 +74,7 @@ extension CampaignViewController: UICollectionViewDataSource, UICollectionViewDe
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.didSelectItem(with: viewModel.models[indexPath.row])
+        delegate?.didSelectItem(with: viewModel.reOrderedModels[indexPath.row])
         viewModel.didSelectItem(at: indexPath.row)
     }
 }

@@ -802,8 +802,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mobile-hackathon" translatesAutoresizingMaskIntoConstraints="NO" id="5Dy-lc-Wrx">
-                                <rect key="frame" x="20" y="54" width="64" height="64"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5Dy-lc-Wrx">
+                                <rect key="frame" x="20" y="54.5" width="64" height="63"/>
+                                <color key="tintColor" red="0.96470588239999999" green="0.43529411759999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="jgA-TK-vuU"/>
                                     <constraint firstAttribute="height" constant="64" id="lBl-6M-gwh"/>
@@ -1150,7 +1151,7 @@
         <image name="face.smiling" catalog="system" width="128" height="121"/>
         <image name="iyilikzinciri-logos_transparent" width="942" height="266"/>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
-        <image name="mobile-hackathon" width="1280" height="720"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="labelColor">
