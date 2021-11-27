@@ -15,10 +15,12 @@ protocol PreLoginCoordinatorDelegate: AnyObject {
 final class PreLoginCoordinator: CoordinatorProtocol {
     private(set) var childCoordinators: [CoordinatorProtocol] = []
     private var navigationController: UINavigationController
+    private var dependency: DependencyContainer
     var parentCoordinator: AppCoordinator?
 
-    init(navController: UINavigationController) {
+    init(navController: UINavigationController, dependency: DependencyContainer) {
         self.navigationController = navController
+        self.dependency = dependency
     }
 
     func start() {
@@ -36,14 +38,14 @@ extension PreLoginCoordinator: PreLoginCoordinatorDelegate {
 
     func goToCampaigns() {
         // go to campaigns
-        let campaignCoordinator = CampaignCoordinator(navController: navigationController)
+        let campaignCoordinator = CampaignCoordinator(navController: navigationController, dependency: dependency)
         childCoordinators.append(campaignCoordinator)
         campaignCoordinator.start()
     }
 
     func goToSignIn() {
         // go to sign in
-        let loginCoordinator = LoginCoordinator(navController: navigationController)
+        let loginCoordinator = LoginCoordinator(navController: navigationController, dependency: dependency)
         childCoordinators.append(loginCoordinator)
         loginCoordinator.start()
     }

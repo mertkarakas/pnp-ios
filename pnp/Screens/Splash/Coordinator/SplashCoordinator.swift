@@ -13,10 +13,12 @@ protocol SplashCoordinatorDelegate: AnyObject {
 
 final class SplashCoordinator: CoordinatorProtocol {
     private(set) var childCoordinators: [CoordinatorProtocol] = []
+    private let dependency: DependencyContainer
     let navigationController: UINavigationController
 
-    init(navController: UINavigationController) {
+    init(navController: UINavigationController, dependency: DependencyContainer) {
         self.navigationController = navController
+        self.dependency = dependency
     }
 
     func start() {
@@ -33,7 +35,7 @@ final class SplashCoordinator: CoordinatorProtocol {
 
 extension SplashCoordinator: SplashCoordinatorDelegate {
     func goToPreLogin() {
-        let preloginCoordinator = PreLoginCoordinator(navController: navigationController)
+        let preloginCoordinator = PreLoginCoordinator(navController: navigationController, dependency: dependency)
         childCoordinators.append(preloginCoordinator)
         preloginCoordinator.start()
     }

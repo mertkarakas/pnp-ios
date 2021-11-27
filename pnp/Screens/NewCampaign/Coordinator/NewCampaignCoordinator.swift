@@ -14,7 +14,7 @@ final class NewCampaignCoordinator: CoordinatorProtocol {
     private(set) var childCoordinators: [CoordinatorProtocol] = []
     let navigationController: UINavigationController
 
-    init(navController: UINavigationController) {
+    init(navController: UINavigationController, dependency: DependencyContainer) {
         self.navigationController = navController
     }
 

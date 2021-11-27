@@ -11,10 +11,12 @@ import Service
 final class DependencyContainer {
 
     let window: UIWindow
-    private let serviceManager: ServiceManager
+    let serviceManager: ServiceManager
+    let coreDataManager: CoreDataManager
 
-    init(window: UIWindow, serviceManager: ServiceManager) {
+    init(window: UIWindow, serviceManager: ServiceManager, coreDataManager: CoreDataManager) {
         self.window = window
         self.serviceManager = serviceManager
+        self.coreDataManager = coreDataManager
     }
 }

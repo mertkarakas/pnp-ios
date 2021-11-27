@@ -24,7 +24,7 @@ final class AppCoordinator: CoordinatorProtocol {
     func start() {
         let navigationController = UINavigationController()
 
-        let splashCoordinator = SplashCoordinator(navController: navigationController)
+        let splashCoordinator = SplashCoordinator(navController: navigationController, dependency: dependencyContainer)
         childCoordinators.append(splashCoordinator)
         splashCoordinator.start()
 

@@ -27,7 +27,7 @@ final class LoginViewController: UIViewController {
     }
 
     @IBAction func loginButtonAction(_ sender: Any) {
-        viewModel.loginButtonAction()
+        viewModel.loginButtonAction(username: usernameTextField.text, password: passwordTextField.text)
     }
 }
 

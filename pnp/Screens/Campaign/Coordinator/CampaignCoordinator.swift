@@ -14,10 +14,12 @@ protocol CampaignCoordinatorDelegate: AnyObject {
 
 final class CampaignCoordinator: CoordinatorProtocol {
     private(set) var childCoordinators: [CoordinatorProtocol] = []
+    private let dependency: DependencyContainer
     let navigationController: UINavigationController
 
-    init(navController: UINavigationController) {
+    init(navController: UINavigationController, dependency: DependencyContainer) {
         self.navigationController = navController
+        self.dependency = dependency
     }
 
     func start() {
@@ -40,7 +42,7 @@ extension CampaignCoordinator: CampaignCoordinatorDelegate {
     }
 
     func goToSignIn() {
-        let loginCoordinator = LoginCoordinator(navController: navigationController)
+        let loginCoordinator = LoginCoordinator(navController: navigationController, dependency: dependency)
         childCoordinators.append(loginCoordinator)
         loginCoordinator.start()
     }

@@ -13,14 +13,16 @@ protocol LoginCoordinatorDelegate: AnyObject {
 
 final class LoginCoordinator: CoordinatorProtocol {
     private(set) var childCoordinators: [CoordinatorProtocol] = []
+    private let dependency: DependencyContainer
     let navigationController: UINavigationController
 
-    init(navController: UINavigationController) {
+    init(navController: UINavigationController, dependency: DependencyContainer) {
         self.navigationController = navController
+        self.dependency = dependency
     }
 
     func start() {
-        let loginViewModel = LoginViewModel()
+        let loginViewModel = LoginViewModel(coreDataManager: dependency.coreDataManager)
         loginViewModel.loginCoordinator = self
         let loginViewController: LoginViewController = .instantiate()
         loginViewController.viewModel = loginViewModel
@@ -31,7 +33,7 @@ final class LoginCoordinator: CoordinatorProtocol {
 
 extension LoginCoordinator: LoginCoordinatorDelegate {
     func goToDashboard() {
-        let dashboardCoordinator = DashboardCoordinator(navController: navigationController)
+        let dashboardCoordinator = DashboardCoordinator(navController: navigationController, dependency: dependency)
         childCoordinators.append(dashboardCoordinator)
         dashboardCoordinator.start()
     }

@@ -13,10 +13,12 @@ protocol DashboardCoordinatorDelegate: AnyObject {
 
 final class DashboardCoordinator: CoordinatorProtocol {
     private(set) var childCoordinators: [CoordinatorProtocol] = []
+    private let dependency: DependencyContainer
     let navigationController: UINavigationController
 
-    init(navController: UINavigationController) {
+    init(navController: UINavigationController, dependency: DependencyContainer) {
         self.navigationController = navController
+        self.dependency = dependency
     }
 
     func start() {
@@ -43,7 +45,7 @@ final class DashboardCoordinator: CoordinatorProtocol {
 
 extension DashboardCoordinator: DashboardCoordinatorDelegate {
     func goToNewCampaign() {
-        let coordinator = NewCampaignCoordinator(navController: navigationController)
+        let coordinator = NewCampaignCoordinator(navController: navigationController, dependency: dependency)
         childCoordinators.append(coordinator)
         coordinator.start()
     }

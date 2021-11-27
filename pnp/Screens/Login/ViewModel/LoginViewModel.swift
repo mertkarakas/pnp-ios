@@ -5,15 +5,23 @@
 //  Created by Mert Karakas [Mirsisbilgiteknolojileri] on 27.11.2021.
 //
 
+import CoreData
+
 final class LoginViewModel {
 
     weak var loginCoordinator: LoginCoordinatorDelegate?
+    let coreDataManager: CoreDataManager
+    let users: [User]
 
-    var onUpdate: () -> Void = {}
-    let cells: [CellType] = [
-        .titleSubtitle(.init(title: "Kullanıcı adı", subtitle: "", placeholder: "Kullanıcı adı seçiniz")),
-        .titleSubtitle(.init(title: "Şifre", subtitle: "", placeholder: "Şifreniz"))
-    ]
+    init(coreDataManager: CoreDataManager) {
+        self.coreDataManager = coreDataManager
+        if coreDataManager.fetchUsers().isEmpty {
+            coreDataManager.saveUser(username: "mert", password: "123456")
+            users = coreDataManager.fetchUsers()
+        } else {
+            users = coreDataManager.fetchUsers()
+        }
+    }
 
     func shouldEnableButton(username: String?, password: String?) -> Bool {
         guard let username = username,
@@ -25,7 +33,15 @@ final class LoginViewModel {
         return true
     }
 
-    func loginButtonAction() {
-        loginCoordinator?.goToDashboard()
+    func loginButtonAction(username: String?, password: String?) {
+        guard let username = username,
+              let password = password else {
+            return
+        }
+        if let user = users.first(where:  {$0.username == username && $0.password == password}) {
+            loginCoordinator?.goToDashboard()
+        } else {
+            // Alert
+        }
     }
 }

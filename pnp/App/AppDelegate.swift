@@ -7,6 +7,7 @@
 
 import UIKit
 import Service
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,8 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
 
         let serviceManager = ServiceManager()
+        let coreDataManager = CoreDataManager()
 
-        let dependency = DependencyContainer(window: window, serviceManager: serviceManager)
+        let dependency = DependencyContainer(window: window, serviceManager: serviceManager, coreDataManager: coreDataManager)
         appCoordinator = AppCoordinator(dependency: dependency)
         appCoordinator?.start()
 
