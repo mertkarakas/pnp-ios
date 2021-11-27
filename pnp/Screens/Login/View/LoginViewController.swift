@@ -17,6 +17,7 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.viewModel.delegate = self
         loginButton.isEnabled = false
         view.backgroundColor = .background
         passwordTextField.isSecureTextEntry = true
@@ -40,5 +41,11 @@ extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         loginButton.isEnabled = viewModel.shouldEnableButton(username: usernameTextField.text, password: passwordTextField.text)
         return true
+    }
+}
+
+extension LoginViewController: LoginViewModelOutputDelegate {
+    func showAlert(message: String) {
+        showAlert(with: "", message: message)
     }
 }

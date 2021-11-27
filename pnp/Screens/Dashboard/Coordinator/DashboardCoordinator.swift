@@ -14,11 +14,13 @@ protocol DashboardCoordinatorDelegate: AnyObject {
 final class DashboardCoordinator: CoordinatorProtocol {
     private(set) var childCoordinators: [CoordinatorProtocol] = []
     private let dependency: DependencyContainer
+    private let user: User
     let navigationController: UINavigationController
 
-    init(navController: UINavigationController, dependency: DependencyContainer) {
+    init(navController: UINavigationController, dependency: DependencyContainer, user: User) {
         self.navigationController = navController
         self.dependency = dependency
+        self.user = user
     }
 
     func start() {

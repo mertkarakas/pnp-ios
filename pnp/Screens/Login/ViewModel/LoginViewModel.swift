@@ -7,11 +7,23 @@
 
 import CoreData
 
+protocol LoginViewModelOutputDelegate: AnyObject {
+    func showAlert(message: String)
+}
+
 final class LoginViewModel {
 
+    //  MARK: - Delegates
+
     weak var loginCoordinator: LoginCoordinatorDelegate?
+    weak var delegate: LoginViewModelOutputDelegate?
+
+    // MARK: - Properties
+
     let coreDataManager: CoreDataManager
     let users: [User]
+
+    // MARK: - Init
 
     init(coreDataManager: CoreDataManager) {
         self.coreDataManager = coreDataManager
@@ -39,9 +51,9 @@ final class LoginViewModel {
             return
         }
         if let user = users.first(where:  {$0.username == username && $0.password == password}) {
-            loginCoordinator?.goToDashboard()
+            loginCoordinator?.goToDashboard(with: user)
         } else {
-            // Alert
+            delegate?.showAlert(message: "Girdiğiniz bilgileri tekrar kontrol edin.")
         }
     }
 }

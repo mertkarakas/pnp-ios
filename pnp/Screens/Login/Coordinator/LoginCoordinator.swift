@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LoginCoordinatorDelegate: AnyObject {
-    func goToDashboard()
+    func goToDashboard(with user: User)
 }
 
 final class LoginCoordinator: CoordinatorProtocol {
@@ -32,8 +32,12 @@ final class LoginCoordinator: CoordinatorProtocol {
 }
 
 extension LoginCoordinator: LoginCoordinatorDelegate {
-    func goToDashboard() {
-        let dashboardCoordinator = DashboardCoordinator(navController: navigationController, dependency: dependency)
+    func goToDashboard(with user: User) {
+        let dashboardCoordinator = DashboardCoordinator(
+            navController: navigationController,
+            dependency: dependency,
+            user: user
+        )
         childCoordinators.append(dashboardCoordinator)
         dashboardCoordinator.start()
     }
