@@ -46,6 +46,9 @@
 		250D88A12751BED000C859BC /* NewCampaignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88A02751BED000C859BC /* NewCampaignViewModel.swift */; };
 		250D88A42751BEED00C859BC /* NewCampaignCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88A32751BEED00C859BC /* NewCampaignCoordinator.swift */; };
 		250D88A82751C52800C859BC /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88A72751C52800C859BC /* PrimaryButton.swift */; };
+		250D88B12751D11B00C859BC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88AF2751D11B00C859BC /* SplashViewController.swift */; };
+		250D88B92751D31100C859BC /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88B82751D31100C859BC /* SplashViewModel.swift */; };
+		250D88BC2751D33100C859BC /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250D88BB2751D33100C859BC /* SplashCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +93,9 @@
 		250D88A02751BED000C859BC /* NewCampaignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCampaignViewModel.swift; sourceTree = "<group>"; };
 		250D88A32751BEED00C859BC /* NewCampaignCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCampaignCoordinator.swift; sourceTree = "<group>"; };
 		250D88A72751C52800C859BC /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		250D88AF2751D11B00C859BC /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		250D88B82751D31100C859BC /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		250D88BB2751D33100C859BC /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +323,7 @@
 		250D88512751836800C859BC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				250D88AE2751D0FB00C859BC /* Splash */,
 				250D88362751835D00C859BC /* Campaign */,
 				250D887B27519E9C00C859BC /* Dashboard */,
 				250D885B27518F5C00C859BC /* Login */,
@@ -478,6 +485,40 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		250D88AE2751D0FB00C859BC /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				250D88BE2751D33400C859BC /* Coordinator */,
+				250D88B72751D2DC00C859BC /* ViewModel */,
+				250D88B62751D2D800C859BC /* View */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		250D88B62751D2D800C859BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				250D88AF2751D11B00C859BC /* SplashViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		250D88B72751D2DC00C859BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				250D88B82751D31100C859BC /* SplashViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		250D88BE2751D33400C859BC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				250D88BB2751D33100C859BC /* SplashCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -553,6 +594,7 @@
 				250D8870275192C100C859BC /* TitleSubtitleCell.swift in Sources */,
 				250D88932751B74A00C859BC /* UIColor+Extensions.swift in Sources */,
 				250D888427519ED400C859BC /* DashboardViewController.swift in Sources */,
+				250D88B92751D31100C859BC /* SplashViewModel.swift in Sources */,
 				250D889D2751BEA800C859BC /* NewCampaignViewController.swift in Sources */,
 				250D88482751835D00C859BC /* CampaignViewModel.swift in Sources */,
 				250D886C2751914E00C859BC /* GeneralConstants.swift in Sources */,
@@ -569,6 +611,7 @@
 				250D88592751871800C859BC /* ListFlowLayout.swift in Sources */,
 				250D888027519ECB00C859BC /* DashboardCoordinator.swift in Sources */,
 				250D884B2751835D00C859BC /* CampaignDetailViewController.swift in Sources */,
+				250D88B12751D11B00C859BC /* SplashViewController.swift in Sources */,
 				250D88542751840600C859BC /* Decimal+Extensions.swift in Sources */,
 				250D88112751786400C859BC /* AppCoordinator.swift in Sources */,
 				250D88A42751BEED00C859BC /* NewCampaignCoordinator.swift in Sources */,
@@ -581,6 +624,7 @@
 				250D881F27517A3900C859BC /* PreLoginViewModel.swift in Sources */,
 				250D881C27517A2D00C859BC /* PreLoginViewController.swift in Sources */,
 				250D886527518FAA00C859BC /* LoginViewModel.swift in Sources */,
+				250D88BC2751D33100C859BC /* SplashCoordinator.swift in Sources */,
 				250D88A12751BED000C859BC /* NewCampaignViewModel.swift in Sources */,
 				250D88A82751C52800C859BC /* PrimaryButton.swift in Sources */,
 				250D888727519EDD00C859BC /* DashboardViewModel.swift in Sources */,

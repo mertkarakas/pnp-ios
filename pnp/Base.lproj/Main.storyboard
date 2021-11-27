@@ -10,6 +10,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="Wda-Dt-Ir3">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3O7-3r-UVd" customClass="SplashViewController" customModule="pnp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="puF-d5-YLX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balloon" translatesAutoresizingMaskIntoConstraints="NO" id="bH4-dU-Peo">
+                                <rect key="frame" x="0.0" y="179" width="414" height="717"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ng0-te-mh8"/>
+                        <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Ng0-te-mh8" firstAttribute="trailing" secondItem="bH4-dU-Peo" secondAttribute="trailing" id="MP2-Uu-UzP"/>
+                            <constraint firstItem="bH4-dU-Peo" firstAttribute="leading" secondItem="Ng0-te-mh8" secondAttribute="leading" id="eXf-9g-Ngp"/>
+                            <constraint firstItem="bH4-dU-Peo" firstAttribute="height" secondItem="puF-d5-YLX" secondAttribute="height" multiplier="0.8" id="i53-QS-q5x"/>
+                            <constraint firstAttribute="bottom" secondItem="bH4-dU-Peo" secondAttribute="bottom" id="ueZ-ps-ycS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="splashImageView" destination="bH4-dU-Peo" id="fde-t1-TtX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kue-LX-8wO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1000.0000000000001" y="404.46428571428572"/>
+        </scene>
         <!--Pre Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -587,6 +616,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="FyG-hv-kjb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BaJ-qm-4E8">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.96470588239999999" green="0.43529411759999997" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -602,6 +632,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="balloon" width="374" height="1020"/>
         <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="121"/>
         <image name="circlebadge.2.fill" catalog="system" width="128" height="91"/>
         <image name="face.smiling" catalog="system" width="128" height="121"/>

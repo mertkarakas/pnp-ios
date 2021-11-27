@@ -24,10 +24,9 @@ final class AppCoordinator: CoordinatorProtocol {
     func start() {
         let navigationController = UINavigationController()
 
-        let preloginCoordinator = PreLoginCoordinator(navController: navigationController)
-        preloginCoordinator.parentCoordinator = self
-        childCoordinators.append(preloginCoordinator)
-        preloginCoordinator.start()
+        let splashCoordinator = SplashCoordinator(navController: navigationController)
+        childCoordinators.append(splashCoordinator)
+        splashCoordinator.start()
 
         let window = dependencyContainer.window
         window.rootViewController = navigationController
