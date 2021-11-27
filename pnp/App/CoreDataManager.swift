@@ -56,10 +56,11 @@ extension CoreDataManager {
 // MARK: - User
 
 extension CoreDataManager {
-    func saveUser(username:String, password: String) {
+    func saveUser(username:String, password: String, token: Int) {
         let user = User(context: moc)
         user.setValue(username, forKey: "username")
         user.setValue(password, forKey: "password")
+        user.setValue(token, forKey: "izToken")
 
         do {
             try moc.save()

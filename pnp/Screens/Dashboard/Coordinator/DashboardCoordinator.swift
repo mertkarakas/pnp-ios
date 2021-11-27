@@ -40,7 +40,7 @@ final class DashboardCoordinator: CoordinatorProtocol {
         dashboardViewController.navigationItem.removeBackBarButtonTitle()
 
 
-        let profileViewModel = ProfileViewModel()
+        let profileViewModel = ProfileViewModel(user: user)
         profileViewModel.coordinatorDelegate = self
 
         let profile: ProfileViewController = .instantiate()

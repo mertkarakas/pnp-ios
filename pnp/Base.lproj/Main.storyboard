@@ -636,7 +636,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="OJS-ow-tTA"/>
                     <connections>
-                        <outlet property="usernameLabel" destination="OQa-UL-pwK" id="D7f-EP-SyQ"/>
+                        <outlet property="izTokenCountLabel" destination="APh-7o-jt9" id="zPH-ld-HZ6"/>
+                        <outlet property="usernameLabel" destination="OQa-UL-pwK" id="2DO-aF-R91"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4xA-I0-tAZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

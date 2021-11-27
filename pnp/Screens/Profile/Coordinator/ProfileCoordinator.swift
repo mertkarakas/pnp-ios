@@ -22,7 +22,7 @@ final class ProfileCoordinator: CoordinatorProtocol {
     }
 
     func start() {
-        let profileViewModel = ProfileViewModel()
+        let profileViewModel = ProfileViewModel(user: nil)
         profileViewModel.coordinatorDelegate = self
 
         let profileViewController: ProfileViewController = .instantiate()

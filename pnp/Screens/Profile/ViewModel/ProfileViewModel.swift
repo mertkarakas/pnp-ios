@@ -6,12 +6,18 @@
 //
 
 protocol ProfileViewModelProtocol {
+    var user: User? { get }
     func logout()
 }
 
 final class ProfileViewModel: ProfileViewModelProtocol {
 
     weak var coordinatorDelegate: ProfileCoordinatorDelegate?
+    let user: User?
+
+    init(user: User?) {
+        self.user = user
+    }
     
     func logout() {
         coordinatorDelegate?.logout()
