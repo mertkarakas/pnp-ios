@@ -16,7 +16,7 @@ final class LoginViewModel {
     init(coreDataManager: CoreDataManager) {
         self.coreDataManager = coreDataManager
         if coreDataManager.fetchUsers().isEmpty {
-            coreDataManager.saveUser(username: "mert", password: "123456")
+            coreDataManager.saveUser(username: "pnp", password: "123456")
             users = coreDataManager.fetchUsers()
         } else {
             users = coreDataManager.fetchUsers()
