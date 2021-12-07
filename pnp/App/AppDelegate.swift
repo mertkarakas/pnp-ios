@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let coreDataManager = CoreDataManager()
 
         let dependency = DependencyContainer(window: window, serviceManager: serviceManager, coreDataManager: coreDataManager)
+        
         appCoordinator = AppCoordinator(dependency: dependency)
         appCoordinator?.start()
 
